@@ -13,7 +13,6 @@ def first_decision():
     print("Enter 1 or 2.\n")
     while True:
         decide = input('1. Do it.\n2. Delay it.\n')
-
         try:
             if int(decide) == 1:
                 do_it()
@@ -22,9 +21,12 @@ def first_decision():
                 delay_it()
                 break
             else:
-                raise ValueError(f'You entered {decide}. Please enter 1 or 2!\n')
+                raise ValueError
         except ValueError as e:
-            print(f'{e}')
+            if decide.isalpha():
+                print(f"You entered {decide}. That's not a number! Please enter 1 or 2!\n")
+            else:
+                print(f"You entered {decide}. Please enter 1 or 2!\n")
             continue
 
 def do_it():

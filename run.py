@@ -30,9 +30,38 @@ def first_decision():
             continue
 
 def do_it():
-    print('option 1')
+    print("I slowly climb the stairs, my hand slipping as I try to hold onto the rail.")
+    print("I tighten my grip and continue upwards. As I turn to the bedroom, I take a deep breath.")
+    print("Standing in the doorway, I look at him. I look at the mess I’ve made.")
+    second_decision()
+
+def second_decision():
+    print("Enter 1 or 2.\n")
+    while True:
+        decide = input('1. Try to wake him.\n2. Clean up.\n')
+        try:
+            if int(decide) == 1:
+                try_to_wake_him()
+                break
+            elif int(decide) == 2:
+                clean_up()
+                break
+            else:
+                raise ValueError
+        except ValueError as e:
+            if decide.isalpha():
+                print(f"You entered {decide}. That's not a number! Please enter 1 or 2!\n")
+            else:
+                print(f"You entered {decide}. Please enter 1 or 2!\n")
+            continue
     
 def delay_it():
+    print("I make a cup of tea. I can’t put this off much longer…")
+
+def try_to_wake_him():
+    print('option 1')
+def clean_up():
     print('option 2')
+
 
 start()

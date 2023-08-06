@@ -7,17 +7,25 @@ def start():
     print("The birds are long gone, and even the rats that swarmed the street in summer are either in hiding or dead.")
     print("Webs of ice have gathered on the windows and I can barely make out the shapes of cars under snowy rubble.")
     print("I’m tired, but I know it must be done today.\n")
+    first_decision()
+    
+def first_decision():
     print("Enter 1 or 2.\n")
-    print("1. Do it.\n2. Delay it.\n")
-    decide = input('')
+    while True:
+        decide = input('1. Do it.\n2. Delay it.\n')
 
-    if int(decide) == 1:
-        do_it()
-    elif int(decide) == 2:
-        delay_it()
-    else:
-        print('Please enter 1 or 2.')
-        start()
+        try:
+            if int(decide) == 1:
+                do_it()
+                break
+            elif int(decide) == 2:
+                delay_it()
+                break
+            else:
+                raise ValueError(f'You entered {decide}. Please enter 1 or 2!\n')
+        except ValueError as e:
+            print(f'{e}')
+            continue
 
 def do_it():
     print('option 1')

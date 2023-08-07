@@ -1,6 +1,66 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+lydia = {
+    "Protagonist": "Lydia",
+    "Title": "The Morning After",
+    "Genre": "Crime"
+    }
+
+simon = {
+    "Protagonist": "Simon",
+    "Title": "The Date",
+    "Genre": "Drama"
+    }
+
+anita = {
+    "Protagonist": "Anita",
+    "Title": "Night",
+    "Genre": "Supernatural"
+    }
+
+def story_selector():
+    print("Enter 1, 2 or 3 to view the corresponding story's plot:\n")
+    print("1. Lydia's Story.\n2. Simon's Story.\n3. Anita's story.")
+    while True:
+        story_selected = input("")
+        try:
+            if int(story_selected) == 1:
+                print("Start reading?\n")
+                print("1. Yes.\n2. No.\n")
+                while True:
+                    confirm_story = input("")
+                    if int(confirm_story) == 1:
+                        name = "lydia"
+                        return name
+                    elif int(confirm_story) == 2:
+                        story_selector()
+            if int(story_selected) == 2:
+                print("Start reading?\n")
+                print("1. Yes.\n2. No.\n")
+                while True:
+                    confirm_story = input("")
+                    if int(confirm_story) == 1:
+                        name = "simon"
+                        return name
+                    elif int(confirm_story) == 2:
+                        story_selector()
+            if int(story_selected) == 3:
+                print("Start reading?\n")
+                print("1. Yes.\n2. No.\n")
+                while True:
+                    confirm_story = input("")
+                    if int(confirm_story) == 1:
+                        name = "anita"
+                        return name
+                    elif int(confirm_story) == 2:
+                        story_selector()
+        except ValueError as e:
+            if story_selected.isalpha():
+                print(f"You entered {story_selected}. That's not a number! Please enter 1, 2 or 3!\n")
+            else:
+                print(f"You entered {story_selected}. Please enter 1, 2 or 3!\n")
+            continue
+
+name = story_selector()
+print(name)
 
 def wrong_decision():
     while True:
@@ -105,6 +165,8 @@ def try_to_wake_him():
     print("At this point, it seems pointless to try to wake him up.")
     print("1. Clean up.\n")
     wrong_decision()
+    clean_up()
+
 def clean_up():
     """
     Runs if the user selects the second option in the do_it function. 
@@ -113,5 +175,4 @@ def clean_up():
     print("I start by clearing the area around the bed, kicking clothes to the side to clear a path to the bed.") 
     print("I’ll need something to clear up the glass.")
 
-
-start()
+    start()

@@ -2,6 +2,21 @@
 # You can delete these comments, but do not change the name of this file
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 
+def wrong_decision():
+    while True:
+        decide = input("")
+        try:
+            if int(decide) == 1:
+                break
+            else:
+                raise ValueError
+        except ValueError as e:
+            if decide.isalpha():
+                print(f"You entered {decide}. That's not a number! Please enter 1!\n")
+            else:
+                print(f"You entered {decide}. Please enter 1!\n")
+            continue
+
 def start():
     """
     Prints the opening lines of the story and calls for the user to make their first decision.
@@ -78,21 +93,9 @@ def delay_it():
     Prints lines of the story and calls for the user to make the next decision.
     """
     print("I make a cup of tea. I can’t put this off much longer…\n")
-    while True:
-        decide = input("1. Do it.\n")
-        try:
-            if int(decide) == 1:
-                do_it()
-                break
-            else:
-                raise ValueError
-        except ValueError as e:
-            if decide.isalpha():
-                print(f"You entered {decide}. That's not a number! Please enter 1!\n")
-            else:
-                print(f"You entered {decide}. Please enter 1!\n")
-            continue
-
+    print("1. Do it.\n")
+    wrong_decision()
+    do_it()
 
 def try_to_wake_him():
     """
@@ -100,6 +103,8 @@ def try_to_wake_him():
     Prints lines of the story and calls for the user to make the next decision.
     """
     print("At this point, it seems pointless to try to wake him up.")
+    print("1. Clean up.\n")
+    wrong_decision()
 def clean_up():
     """
     Runs if the user selects the second option in the do_it function. 

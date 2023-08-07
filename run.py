@@ -77,20 +77,36 @@ def delay_it():
     Runs if the user selects the second option in the start function. 
     Prints lines of the story and calls for the user to make the next decision.
     """
-    print("I make a cup of tea. I can’t put this off much longer…")
+    print("I make a cup of tea. I can’t put this off much longer…\n")
+    while True:
+        decide = input("1. Do it.\n")
+        try:
+            if int(decide) == 1:
+                do_it()
+                break
+            else:
+                raise ValueError
+        except ValueError as e:
+            if decide.isalpha():
+                print(f"You entered {decide}. That's not a number! Please enter 1!\n")
+            else:
+                print(f"You entered {decide}. Please enter 1!\n")
+            continue
+
 
 def try_to_wake_him():
     """
     Runs if the user selects the first option in the do_it function. 
     Prints lines of the story and calls for the user to make the next decision.
     """
-    print('option 1')
+    print("At this point, it seems pointless to try to wake him up.")
 def clean_up():
     """
     Runs if the user selects the second option in the do_it function. 
     Prints lines of the story and calls for the user to make the next decision.
     """
-    print('option 2')
+    print("I start by clearing the area around the bed, kicking clothes to the side to clear a path to the bed.") 
+    print("I’ll need something to clear up the glass.")
 
 
 start()

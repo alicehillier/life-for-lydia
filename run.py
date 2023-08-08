@@ -64,8 +64,8 @@ def story_selector():
                 print(f"You entered {story_selected}. Please enter a valid number from the options above!\n")
             continue
 
-name = story_selector()
-print(name)
+# name = story_selector()
+# print(name)
 
 def wrong_decision():
     while True:
@@ -244,6 +244,10 @@ def fourth_decision():
 
 def get_tissues():
     print("Tissues aren’t going to be enough…\n")
+    print("1. Get towels.\n")
+    wrong_decision()
+    get_towels()
+
 def get_towels():
     print("It takes a few towels, but they soak up most of the blood. I’ll have to use a mop for the rest.\n")
     fifth_decision()

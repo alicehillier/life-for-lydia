@@ -243,8 +243,65 @@ def fourth_decision():
             continue
 
 def get_tissues():
-    print('get tissues now')
+    print("Tissues aren’t going to be enough…\n")
 def get_towels():
-    print('get towels now')
+    print("It takes a few towels, but they soak up most of the blood. I’ll have to use a mop for the rest.\n")
+    fifth_decision()
+
+def fifth_decision():
+    """
+    Processes the user's input, calling the relevant function in accordance with the user's selection.
+    Raises ValueError if the user enters an invalid value and loops the input requirement until the value
+    is considered valid.
+    """
+    print("Enter 1.\n")
+    while True:
+        decide = input('1. Get a mop.\n')
+        try:
+            if int(decide) == 1:
+                get_a_mop_2()
+                break
+            else:
+                raise ValueError
+        except ValueError as e:
+            if decide.isalpha():
+                print(f"You entered {decide}. That's not a number! Please enter 1!\n")
+            else:
+                print(f"You entered {decide}. Please enter 1!\n")
+            continue
+
+def get_a_mop_2():
+    print("As I make my way downstairs, I hear a barrage of heavy bangs on the front door.") 
+    print("I look down at my clothes. I can’t see any stains. Should I open the door?")
+    sixth_decision()
+
+def sixth_decision():
+    """
+    Processes the user's input, calling the relevant function in accordance with the user's selection.
+    Raises ValueError if the user enters an invalid value and loops the input requirement until the value
+    is considered valid.
+    """
+    print("Enter 1 or 2.\n")
+    while True:
+        decide = input('1. Open the door.\n2. Ignore it.\n')
+        try:
+            if int(decide) == 1:
+                open_the_door()
+                break
+            elif int(decide) == 2:
+                ignore_it()
+            else:
+                raise ValueError
+        except ValueError as e:
+            if decide.isalpha():
+                print(f"You entered {decide}. That's not a number! Please enter 1!\n")
+            else:
+                print(f"You entered {decide}. Please enter 1!\n")
+            continue
+
+def open_the_door():
+    print("open the door")
+def ignore_it():
+    print("ignore it")
 
 start()

@@ -298,14 +298,67 @@ def sixth_decision():
                 raise ValueError
         except ValueError as e:
             if decide.isalpha():
-                print(f"You entered {decide}. That's not a number! Please enter 1!\n")
+                print(f"You entered {decide}. That's not a number! Please enter 1 or 2!\n")
             else:
-                print(f"You entered {decide}. Please enter 1!\n")
+                print(f"You entered {decide}. Please enter 1 or 2!\n")
             continue
 
 def open_the_door():
-    print("open the door")
+    print("Are you sure?")
+    seventh_decision()
+
+def seventh_decision():
+    """
+    Processes the user's input, calling the relevant function in accordance with the user's selection.
+    Raises ValueError if the user enters an invalid value and loops the input requirement until the value
+    is considered valid.
+    """
+    print("Enter 1 or 2.\n")
+    while True:
+        decide = input('1. Look for stains.\n2. Open it.\n')
+        try:
+            if int(decide) == 1:
+                look_for_stains()
+                break
+            elif int(decide) == 2:
+                open_it()
+            else:
+                raise ValueError
+        except ValueError as e:
+            if decide.isalpha():
+                print(f"You entered {decide}. That's not a number! Please enter 1 or 2!\n")
+            else:
+                print(f"You entered {decide}. Please enter 1 or 2!\n")
+            continue
+
 def ignore_it():
-    print("ignore it")
+    print("I continue downstairs, quickly and quietly.") 
+    print("As I go to open the storage cupboard under the stairs, I notice blood on my hands.")
+    print("I rush back to the stairs and check the bannister.")
+    print("Long streaks of blood have stained the white-painted wood.")
+    print("That’s why my hand slipped earlier…")
+    print("I hear the squeak of metal and look at the door.")
+    print("The letterbox is open and dark eyes glare at me.")
+    tenth_decision()
+
+def look_for_stains():
+    print("I check my clothes again and see some splashes of blood on my slippers.")
+    print("As I pull my gown towards me to get a better look, the fabric sticks to my hands.")
+    print("I pry them away and see that they are still wet with blood.")
+    print("I hear the squeak of metal and look at the door.")
+    print("The letterbox is open and dark eyes glare at me as I stand on the stairs.")
+    print("'We are responding to a call. Open the door, please,' the man says")
+    tenth_decision()
+
+def open_it():
+    print("I try to compose myself and open the door with a soft smile.")
+    print("In front of me are two police officers.")
+    print("'Miss?' the older man says, his brows furrowed.") 
+    print("The younger officer is staring at my hands.")
+    print("I look down at them and see that they are still wet with blood.")
+    print("'Can we come in?'”' The older man asks.")
+    print("I try to think of a response, but my mind is blank.")
+    print("I feel as though my heart has stopped. The man steps towards me.")
+    eighth_decision()
 
 start()

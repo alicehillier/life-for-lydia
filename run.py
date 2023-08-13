@@ -18,7 +18,7 @@ def story_selector():
         story_selected = input("")
         try:
             if int(story_selected) == 1:
-                print(f"Start reading {int(chapters[story_selected])}?\n")
+                print(f"Start reading {chapters[int(story_selected)]}?\n")
                 print("1. Yes.\n2. No.\n")
                 while True:
                     confirm_story = input("")
@@ -27,7 +27,7 @@ def story_selector():
                     elif int(confirm_story) == 2:
                         story_selector()
             elif int(story_selected) == 2:
-                print(f"Start reading {int(chapters[story_selected])}?\n")
+                print(f"Start reading {chapters[int(story_selected)]}?\n")
                 print("1. Yes.\n2. No.\n")
                 while True:
                     confirm_story = input("")

@@ -411,5 +411,39 @@ def ninth_decision():
                 print(f"You entered {decide}. Please enter 1 or 2!\n")
             continue
 
+def escape():
+    print("I rush to the kitchen to escape out the back door.")
+    print("As I trudge through the thick snow, my slippers drenched and my feet freezing, I reach the back alley.")
+    print("I hear men shouting something at me.")
+    tenth_decision()
+
+def tenth_decision():
+    """
+    Processes the user's input, calling the relevant function in accordance with the user's selection.
+    Raises ValueError if the user enters an invalid value and loops the input requirement until the value
+    is considered valid.
+    """
+    print("Enter 1 or 2.\n")
+    while True:
+        decide = input('1. Surrender.\n2. Keep running.\n')
+        try:
+            if int(decide) == 1:
+                surrender()
+                break
+            elif int(decide) == 2:
+                keep_running()
+            else:
+                raise ValueError
+        except ValueError as e:
+            if decide.isalpha():
+                print(f"You entered {decide}. That's not a number! Please enter 1 or 2!\n")
+            else:
+                print(f"You entered {decide}. Please enter 1 or 2!\n")
+            continue
+
+def surrender():
+    print("surrender")
+def keep_running():
+    print("keep running")
 
 start()

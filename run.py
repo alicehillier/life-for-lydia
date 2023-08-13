@@ -442,8 +442,19 @@ def tenth_decision():
             continue
 
 def surrender():
-    print("surrender")
+    print("I look to my left at the end of the alley and see the officer rushing towards me.")
+    print("'Stop!' he yells. I glance to my right. I know I cannot outrun him.")
+    print("I raise my hands and he approaches me.")
+    print("'Lets have a talk,' he says.")
+
 def keep_running():
-    print("keep running")
+    print("I kick off my slippers and my feet are raw.")
+    print("I head right and follow the alley as it winds between houses.")
+    print("I glance behind me briefly and see the two officers.")
+    print("'Stop!' one of the men yells. I have to outrun them.")
+    print("As I turn a corner, something sharp cuts into my foot.")
+    print("I scream and feel myself falling forwards.")
+    print("I hear a crack as my knee hits the ground. The men stand over me.")
+    print("I’m done.")
 
 start()

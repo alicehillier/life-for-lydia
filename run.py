@@ -339,7 +339,7 @@ def ignore_it():
     print("That’s why my hand slipped earlier…")
     print("I hear the squeak of metal and look at the door.")
     print("The letterbox is open and dark eyes glare at me.")
-    tenth_decision()
+    ninth_decision()
 
 def look_for_stains():
     print("I check my clothes again and see some splashes of blood on my slippers.")
@@ -348,7 +348,7 @@ def look_for_stains():
     print("I hear the squeak of metal and look at the door.")
     print("The letterbox is open and dark eyes glare at me as I stand on the stairs.")
     print("'We are responding to a call. Open the door, please,' the man says")
-    tenth_decision()
+    ninth_decision()
 
 def open_it():
     print("I try to compose myself and open the door with a soft smile.")
@@ -360,5 +360,56 @@ def open_it():
     print("I try to think of a response, but my mind is blank.")
     print("I feel as though my heart has stopped. The man steps towards me.")
     eighth_decision()
+
+def eighth_decision():
+    """
+    Processes the user's input, calling the relevant function in accordance with the user's selection.
+    Raises ValueError if the user enters an invalid value and loops the input requirement until the value
+    is considered valid.
+    """
+    print("Enter 1 or 2.\n")
+    while True:
+        decide = input('1. Think of an excuse.\n')
+        try:
+            if int(decide) == 1:
+                think_of_excuse()
+                break
+            else:
+                raise ValueError
+        except ValueError as e:
+            if decide.isalpha():
+                print(f"You entered {decide}. That's not a number! Please enter 1 or 2!\n")
+            else:
+                print(f"You entered {decide}. Please enter 1 or 2!\n")
+            continue
+
+def think_of_excuse():
+    print("'I… sorry, I was just about to go out,' I say.")
+    print("'In your dressing gown, Miss?' the older man says.")
+    print("I slam the door shut.")
+    ninth_decision()
+
+def ninth_decision():
+    """
+    Processes the user's input, calling the relevant function in accordance with the user's selection.
+    Raises ValueError if the user enters an invalid value and loops the input requirement until the value
+    is considered valid.
+    """
+    print("Enter 1.\n")
+    while True:
+        decide = input('1. Escape.\n')
+        try:
+            if int(decide) == 1:
+                escape()
+                break
+            else:
+                raise ValueError
+        except ValueError as e:
+            if decide.isalpha():
+                print(f"You entered {decide}. That's not a number! Please enter 1 or 2!\n")
+            else:
+                print(f"You entered {decide}. Please enter 1 or 2!\n")
+            continue
+
 
 start()

@@ -1,4 +1,5 @@
 from chapter1 import *
+from chapter2 import *
 
 def story_selector():
     """
@@ -24,9 +25,18 @@ def story_selector():
                     if int(confirm_story) == 1:
                         chapter1()
                     elif int(confirm_story) == 2:
-                        chapter2()
-                    else:
                         story_selector()
+            elif int(story_selected) == 2:
+                print(f"Start reading {chapters[story_selected]}?\n")
+                print("1. Yes.\n2. No.\n")
+                while True:
+                    confirm_story = input("")
+                    if int(confirm_story) == 1:
+                        chapter2()
+                    elif int(confirm_story) == 2:
+                        story_selector()
+            else:
+                raise ValueError
         except ValueError as e:
             if story_selected.isalpha():
                 print(f"You entered {story_selected}. That's not a number! Please enter a valid number from the options above!\n")
@@ -39,6 +49,3 @@ def story_selector():
 story_selector()
 
 # chapter1()
-
-def chapter2():
-    print("chapter 2 here")

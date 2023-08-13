@@ -1,3 +1,11 @@
+def error_statements(decide):
+    if decide.isalpha():
+        print(f"You entered {decide}. That's not a number! Please enter a valid number from the options above!\n")
+    elif decide.isspace():
+        print("You didn't enter anything! Please enter a valid number from the options above!\n")
+    else:
+        print(f"You entered {decide}. Please enter a valid number from the options above!\n")
+
 def wrong_decision():
     while True:
         decide = input("")
@@ -6,11 +14,8 @@ def wrong_decision():
                 break
             else:
                 raise ValueError
-        except ValueError as e:
-            if decide.isalpha():
-                print(f"You entered {decide}. That's not a number! Please enter 1!\n")
-            else:
-                print(f"You entered {decide}. Please enter 1!\n")
+        except ValueError:
+            error_statements(decide)
             continue
 
 def chapter1():
@@ -41,11 +46,8 @@ def first_decision():
                 break
             else:
                 raise ValueError
-        except ValueError as e:
-            if decide.isalpha():
-                print(f"You entered {decide}. That's not a number! Please enter 1 or 2!\n")
-            else:
-                print(f"You entered {decide}. Please enter 1 or 2!\n")
+        except ValueError:
+            error_statements(decide)
             continue
 
 def do_it():
@@ -76,11 +78,8 @@ def second_decision():
                 break
             else:
                 raise ValueError
-        except ValueError as e:
-            if decide.isalpha():
-                print(f"You entered {decide}. That's not a number! Please enter 1 or 2!\n")
-            else:
-                print(f"You entered {decide}. Please enter 1 or 2!\n")
+        except ValueError:
+            error_statements(decide)
             continue
     
 def delay_it():
@@ -130,11 +129,8 @@ def third_decision():
                 break
             else:
                 raise ValueError
-        except ValueError as e:
-            if decide.isalpha():
-                print(f"You entered {decide}. That's not a number! Please enter 1 or 2!\n")
-            else:
-                print(f"You entered {decide}. Please enter 1 or 2!\n")
+        except ValueError:
+            error_statements(decide)
             continue
 
 def get_a_mop_1():
@@ -166,11 +162,8 @@ def fourth_decision():
                 break
             else:
                 raise ValueError
-        except ValueError as e:
-            if decide.isalpha():
-                print(f"You entered {decide}. That's not a number! Please enter 1 or 2!\n")
-            else:
-                print(f"You entered {decide}. Please enter 1 or 2!\n")
+        except ValueError:
+            error_statements(decide)
             continue
 
 def get_tissues():
@@ -198,11 +191,8 @@ def fifth_decision():
                 break
             else:
                 raise ValueError
-        except ValueError as e:
-            if decide.isalpha():
-                print(f"You entered {decide}. That's not a number! Please enter 1!\n")
-            else:
-                print(f"You entered {decide}. Please enter 1!\n")
+        except ValueError:
+            error_statements(decide)
             continue
 
 def get_a_mop_2():
@@ -228,11 +218,8 @@ def sixth_decision():
                 break
             else:
                 raise ValueError
-        except ValueError as e:
-            if decide.isalpha():
-                print(f"You entered {decide}. That's not a number! Please enter 1 or 2!\n")
-            else:
-                print(f"You entered {decide}. Please enter 1 or 2!\n")
+        except ValueError:
+            error_statements(decide)
             continue
 
 def open_the_door():
@@ -257,11 +244,8 @@ def seventh_decision():
                 break
             else:
                 raise ValueError
-        except ValueError as e:
-            if decide.isalpha():
-                print(f"You entered {decide}. That's not a number! Please enter 1 or 2!\n")
-            else:
-                print(f"You entered {decide}. Please enter 1 or 2!\n")
+        except ValueError:
+            error_statements(decide)
             continue
 
 def ignore_it():
@@ -309,11 +293,8 @@ def eighth_decision():
                 break
             else:
                 raise ValueError
-        except ValueError as e:
-            if decide.isalpha():
-                print(f"You entered {decide}. That's not a number! Please enter 1 or 2!\n")
-            else:
-                print(f"You entered {decide}. Please enter 1 or 2!\n")
+        except ValueError:
+            error_statements(decide)
             continue
 
 def think_of_excuse():
@@ -337,11 +318,8 @@ def ninth_decision():
                 break
             else:
                 raise ValueError
-        except ValueError as e:
-            if decide.isalpha():
-                print(f"You entered {decide}. That's not a number! Please enter 1 or 2!\n")
-            else:
-                print(f"You entered {decide}. Please enter 1 or 2!\n")
+        except ValueError:
+            error_statements(decide)
             continue
 
 def escape():
@@ -368,11 +346,8 @@ def tenth_decision():
                 break
             else:
                 raise ValueError
-        except ValueError as e:
-            if decide.isalpha():
-                print(f"You entered {decide}. That's not a number! Please enter 1 or 2!\n")
-            else:
-                print(f"You entered {decide}. Please enter 1 or 2!\n")
+        except ValueError:
+            error_statements(decide)
             continue
 
 def surrender():

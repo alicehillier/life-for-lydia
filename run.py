@@ -37,13 +37,8 @@ def story_selector():
                         story_selector()
             else:
                 raise ValueError
-        except ValueError as e:
-            if story_selected.isalpha():
-                print(f"You entered {story_selected}. That's not a number! Please enter a valid number from the options above!\n")
-            elif story_selected.isspace():
-                print("You didn't enter anything! Please enter a valid number from the options above!\n")
-            else:
-                print(f"You entered {story_selected}. Please enter a valid number from the options above!\n")
+        except ValueError:
+            error_statements(story_selected)
             continue
 
 story_selector()

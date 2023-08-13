@@ -15,10 +15,10 @@ def story_selector():
     print("Enter 1 or 2 to start reading the selected chapter.\n")
     print("1. Chapter One: The Morning After.\n2. Chapter Two: The Interview.\n")
     while True:
-        story_selected = int(input(""))
+        story_selected = input("")
         try:
             if int(story_selected) == 1:
-                print(f"Start reading {chapters[story_selected]}?\n")
+                print(f"Start reading {int(chapters[story_selected])}?\n")
                 print("1. Yes.\n2. No.\n")
                 while True:
                     confirm_story = input("")
@@ -27,7 +27,7 @@ def story_selector():
                     elif int(confirm_story) == 2:
                         story_selector()
             elif int(story_selected) == 2:
-                print(f"Start reading {chapters[story_selected]}?\n")
+                print(f"Start reading {int(chapters[story_selected])}?\n")
                 print("1. Yes.\n2. No.\n")
                 while True:
                     confirm_story = input("")

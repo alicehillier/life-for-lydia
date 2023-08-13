@@ -294,6 +294,7 @@ def sixth_decision():
                 break
             elif int(decide) == 2:
                 ignore_it()
+                break
             else:
                 raise ValueError
         except ValueError as e:
@@ -322,6 +323,7 @@ def seventh_decision():
                 break
             elif int(decide) == 2:
                 open_it()
+                break
             else:
                 raise ValueError
         except ValueError as e:
@@ -432,6 +434,7 @@ def tenth_decision():
                 break
             elif int(decide) == 2:
                 keep_running()
+                break
             else:
                 raise ValueError
         except ValueError as e:

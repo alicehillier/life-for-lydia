@@ -268,7 +268,18 @@ def eighth_question():
             continue
 
 def we_argued():
-    print("we argued")
+    print("'I was having a drink and packing my bag when he came home,' I say.")
+    print("'I was just going to stay with my sister for a while.'")
+    print("'He came home and found me upstairs. I told him what I knew and we argued,' I say.")
+    print("'And then?' The officer asks.")
+    print("'He got mad. I got scared,' I continue.")
+    print("'He lunged at me and I dropped the wine glass. It smashed.'")
+    print("'I stepped back when he got close to me and I tripped on something.'")
+    print("'I saw the broken glass and I just… I thought he was going to hurt me.'")
+    print("'I\’d never seen him look like that before.'")
 
 def question_findings():
-    print("question findings")
+    print("'He certainly seemed drunk to me,' I say.")
+    print("'So the report is incorrect?' the officer asks.")
+    print("'It could be,' I say.")
+    print("The officer smiles. 'Then what happened?'")

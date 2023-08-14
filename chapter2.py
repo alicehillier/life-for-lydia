@@ -277,9 +277,72 @@ def we_argued():
     print("'I stepped back when he got close to me and I tripped on something.'")
     print("'I saw the broken glass and I just… I thought he was going to hurt me.'")
     print("'I\’d never seen him look like that before.'")
+    tenth_question()
 
 def question_findings():
     print("'He certainly seemed drunk to me,' I say.")
     print("'So the report is incorrect?' the officer asks.")
     print("'It could be,' I say.")
     print("The officer smiles. 'Then what happened?'")
+    ninth_question()
+
+def ninth_question():
+    """
+    Processes the user's input, calling the relevant function in accordance with the user's selection.
+    Raises ValueError if the user enters an invalid value and loops the input requirement until the value
+    is considered valid.
+    """
+    print("Enter 1.\n")
+    while True:
+        decide = input('1. He attacked me.\n')
+        try:
+            if int(decide) == 1:
+                he_attacked_me()
+                break
+            else:
+                raise ValueError
+        except ValueError:
+            error_statements(decide)
+            continue
+
+def he_attacked_me():
+    print("'He smashed the wine glass and threatened me with a large piece,' I say.")
+    print("'I tried to leave, but he stood between me and the door.'")
+    print("'I begged him to let me go and he just… attacked me,' I say.")
+    print("'And then?' the officer asks.")
+    print("'I don't remember,' I say.")
+
+def tenth_question():
+    """
+    Processes the user's input, calling the relevant function in accordance with the user's selection.
+    Raises ValueError if the user enters an invalid value and loops the input requirement until the value
+    is considered valid.
+    """
+    print("Enter 1.\n")
+    while True:
+        decide = input('1. Listen to the officer.\n')
+        try:
+            if int(decide) == 1:
+                listen_to_officer_1()
+                break
+            else:
+                raise ValueError
+        except ValueError:
+            error_statements(decide)
+            continue
+
+def listen_to_officer_1():
+    print("'Look, Lydia,' the officer says. 'Charges are going to be made, okay?'")
+    print("I nod, close to tears.")
+    print(f"'Interview closing at {time}. Suspect is detained and awaiting charges,' the officer says.")
+
+
+def listen_to_officer_2():
+    print("'Lydia, what you\’ve shared with us today has been nothing short of preposterous,' the officer says.")
+    print("'First you said you were trying to hurt yourself,' he says,")
+    print("'Then you said he was drunk, even questioning the toxicology report.'")
+    print("'Next, your husband was attacking you with a broken wine glass,'")
+    print("'despite the fact that you were the one drinking from it,' he continues.")
+    print("'Charges are going to be made and you\’ve made things much worse for yourself.'")
+    print("'Officer Anderson will return you to your cell.'")
+    print(f"'Interview closing at {time}. Suspect is detained and awaiting charges,' the officer says.")

@@ -97,7 +97,16 @@ def second_decision():
             continue
 
 def explain():
-    print("explain")
+    print("'I found out that he was having an affair,' I say.")
+    print("'So you killed him?' the officer asks.")
+    print("'No,' I say.")
+    third_decision()
 
 def say_nothing():
-    print("say nothing")
+    print("'Given that we found your husband dead, with several stab wounds, in your bedroom...'")
+    print("'and you were covered in blood and running away...'")
+    print("'It looks bad for you,' the officer says.")
+    third_decision()
+
+def third_decision():
+    print("third decision")

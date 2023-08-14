@@ -184,7 +184,91 @@ def fifth_decision():
             continue
 
 def he_was_drunk():
-    print("he was drunk")
+    print("'He seemed to be inebriated,' I say.")
+    print("'He was drunk?' the officer asks.")
+    print("I nod. 'He\'s a different person when he\'s drunk,' I say.")
+    print("'In what way?' he asks.")
+    print("'He can be unpredictable. Scary, even,' I say.")
+    print("'I see… It\'s interesting you say that, Lydia,' he says,")
+    print("'because the toxicology report showed no trace of alcohol.'")
+    print("'In fact, it found nothing at all,' he says.")
+    eighth_question()
 
 def he_was_aggressive():
-    print("he was aggressive")
+    print("'He could be aggressive,' I say.")
+    print("'He could be, or he was?' the officer asks.")
+    print("'He was. He was controlling and he didn\’t have control this time,' I say.")
+    print("'Was he drunk?' he asks.")
+    sixth_question()
+
+def sixth_question():
+    """
+    Processes the user's input, calling the relevant function in accordance with the user's selection.
+    Raises ValueError if the user enters an invalid value and loops the input requirement until the value
+    is considered valid.
+    """
+    print("Enter 1 or 2.\n")
+    while True:
+        decide = input('1. He was drunk.\n2. He might not have been drunk.\n')
+        try:
+            if int(decide) == 1:
+                he_was_drunk()
+                break
+            elif int(decide) == 2:
+                he_was_not_drunk()
+                break
+            else:
+                raise ValueError
+        except ValueError:
+            error_statements(decide)
+            continue
+
+def he_was_not_drunk():
+    print("'Why would you confront a man who you say is aggressive towards you?' the officer asks.")
+    print("'I didn\’t know it would be this bad,' I say.")
+    print("The officer sighs. 'Let\’s get to the point,' he says.")
+    seventh_question()
+
+def seventh_question():
+    """
+    Processes the user's input, calling the relevant function in accordance with the user's selection.
+    Raises ValueError if the user enters an invalid value and loops the input requirement until the value
+    is considered valid.
+    """
+    print("Enter 1.\n")
+    while True:
+        decide = input('1. We argued.\n')
+        try:
+            if int(decide) == 1:
+                we_argued()
+                break
+            else:
+                raise ValueError
+        except ValueError:
+            error_statements(decide)
+            continue
+
+def eighth_question():
+    """
+    Processes the user's input, calling the relevant function in accordance with the user's selection.
+    Raises ValueError if the user enters an invalid value and loops the input requirement until the value
+    is considered valid.
+    """
+    print("Enter 1.\n")
+    while True:
+        decide = input('1. Question the findings.\n')
+        try:
+            if int(decide) == 1:
+                question_findings()
+                break
+            else:
+                raise ValueError
+        except ValueError:
+            error_statements(decide)
+            continue
+
+def we_argued():
+    print("we argued")
+
+def question_findings():
+    print("question findings")

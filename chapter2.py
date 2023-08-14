@@ -109,4 +109,82 @@ def say_nothing():
     third_decision()
 
 def third_decision():
-    print("third decision")
+    """
+    Processes the user's input, calling the relevant function in accordance with the user's selection.
+    Raises ValueError if the user enters an invalid value and loops the input requirement until the value
+    is considered valid.
+    """
+    print("Enter 1 or 2.\n")
+    while True:
+        decide = input('1. It was an accident.\n2. It was self-defence.\n')
+        try:
+            if int(decide) == 1:
+                accident()
+                break
+            elif int(decide) == 2:
+                self_defence()
+                break
+            else:
+                raise ValueError
+        except ValueError:
+            error_statements(decide)
+            continue
+
+def accident():
+    print("'“'I was trying to hurt myself. He just…got in the way,' I say.")
+    print("'And how many times did he get in the way?'”' the officer asks.")
+    print("'See, his body had multiple stab wounds...' he continues")
+    print("'Did you accidentally stab him six or seven times?'")
+    fourth_decision()
+
+def self_defence():
+    print("'I told him that I knew he was having an affair,' I say. 'He was angry.'")
+    print("'Why would he be angry at you for that?' the officer asks.")
+    fifth_decision()
+
+def fourth_decision():
+    """
+    Processes the user's input, calling the relevant function in accordance with the user's selection.
+    Raises ValueError if the user enters an invalid value and loops the input requirement until the value
+    is considered valid.
+    """
+    print("Enter 1.\n")
+    while True:
+        decide = input('1. He was drunk.\n')
+        try:
+            if int(decide) == 1:
+                he_was_drunk()
+                break
+            else:
+                raise ValueError
+        except ValueError:
+            error_statements(decide)
+            continue
+
+def fifth_decision():
+    """
+    Processes the user's input, calling the relevant function in accordance with the user's selection.
+    Raises ValueError if the user enters an invalid value and loops the input requirement until the value
+    is considered valid.
+    """
+    print("Enter 1 or 2.\n")
+    while True:
+        decide = input('1. He was aggressive.\n2. He was drunk.\n')
+        try:
+            if int(decide) == 1:
+                he_was_aggressive()
+                break
+            elif int(decide) == 2:
+                he_was_drunk()
+                break
+            else:
+                raise ValueError
+        except ValueError:
+            error_statements(decide)
+            continue
+
+def he_was_drunk():
+    print("he was drunk")
+
+def he_was_aggressive():
+    print("he was aggressive")

@@ -22,11 +22,11 @@ simon = {
 
 def lydias_file():
     for key, value in lydia.items():
-        print("\n{}: {}".format(key, value))
+        print(f"\n{key}: {value}")
 
 def simons_file():
     for key, value in simon.items():
-        print("\n{}: {}\n".format(key, value))
+        print(f"\n{key}: {value}")
 
 date = datetime.now()
 today = date.strftime("%A, %B %d, %Y")

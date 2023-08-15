@@ -17,28 +17,45 @@ def story_selector():
         story_selected = getpass.getpass(prompt = "Enter 1 or 2 to start reading the selected chapter.\n")
         try:
             if int(story_selected) == 1:
-                print(f"Start reading {chapters[int(story_selected)]}?\n")
-                print("1. Yes.\n2. No.\n")
-                while True:
-                    confirm_story = getpass.getpass(prompt = "Enter 1 or 2.\n")
-                    if int(confirm_story) == 1:
-                        chapter1()
-                    elif int(confirm_story) == 2:
-                        continue
+                chapter1()
+                break
             elif int(story_selected) == 2:
-                print(f"Start reading {chapters[int(story_selected)]}?\n")
-                print("1. Yes.\n2. No.\n")
-                while True:
-                    confirm_story = getpass.getpass(prompt = "Enter 1 or 2.\n")
-                    if int(confirm_story) == 1:
-                        chapter2()
-                    elif int(confirm_story) == 2:
-                        continue
+                chapter2()
+                break
             else:
                 raise ValueError
         except ValueError:
             error_statements(story_selected)
             continue
+
+    # print("1. Chapter One: The Morning After.\n2. Chapter Two: The Interview.\n")
+    # while True:
+    #     story_selected = getpass.getpass(prompt = "Enter 1 or 2 to start reading the selected chapter.\n")
+    #     try:
+    #         if int(story_selected) == 1:
+    #             print(f"Start reading {chapters[int(story_selected)]}?\n")
+    #             print("1. Yes.\n2. No.\n")
+    #             while True:
+    #                 confirm_story = input("")
+    #                 confirm_story = getpass.getpass(prompt = "Enter 1 or 2.\n")
+    #                 if int(confirm_story) == 1:
+    #                     chapter1()
+    #                 elif int(confirm_story) == 2:
+    #                     continue
+    #         elif int(story_selected) == 2:
+    #             print(f"Start reading {chapters[int(story_selected)]}?\n")
+    #             print("1. Yes.\n2. No.\n")
+    #             while True:
+    #                 confirm_story = input("")
+    #                 if int(confirm_story) == 1:
+    #                     chapter2()
+    #                 elif int(confirm_story) == 2:
+    #                     continue
+    #         else:
+    #             raise ValueError
+    #     except ValueError:
+    #         error_statements(story_selected)
+    #         continue
 
 story_selector()
 

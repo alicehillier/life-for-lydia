@@ -51,9 +51,9 @@ def first_decision():
     Raises ValueError if the user enters an invalid value and loops the input requirement until the value
     is considered valid.
     """
-    print('\nEnter 1 or 2.\n')
+    print('\n1. Yes.\n2. No.\n')
     while True:
-        decide = input('1. Yes.\n2. No.\n')
+        decide = getpass.getpass(prompt = "\nEnter 1 or 2.\n")
         try:
             if int(decide) == 1:
                 yes()
@@ -90,9 +90,9 @@ def second_decision():
     Raises ValueError if the user enters an invalid value and loops the input requirement until the value
     is considered valid.
     """
-    print("\nEnter 1 or 2.\n")
+    print("\n1. Explain.\n2. Say Nothing.\n")
     while True:
-        decide = input('1. Explain.\n2. Say nothing.\n')
+        decide = getpass.getpass(prompt = "\nEnter 1 or 2.\n")
         try:
             if int(decide) == 1:
                 explain()
@@ -124,9 +124,9 @@ def third_decision():
     Raises ValueError if the user enters an invalid value and loops the input requirement until the value
     is considered valid.
     """
-    print("\nEnter 1 or 2.\n")
+    print("\n1. It was an accident.\n2. It was self-defence.\n")
     while True:
-        decide = input('1. It was an accident.\n2. It was self-defence.\n')
+        decide = getpass.getpass(prompt = "\nEnter 1 or 2.\n")
         try:
             if int(decide) == 1:
                 accident()
@@ -159,9 +159,9 @@ def fourth_decision():
     Raises ValueError if the user enters an invalid value and loops the input requirement until the value
     is considered valid.
     """
-    print("\nEnter 1.\n")
+    print("\n1. He was drunk.\n")
     while True:
-        decide = input('1. He was drunk.\n')
+        decide = getpass.getpass(prompt = "\nEnter 1.\n")
         try:
             if int(decide) == 1:
                 he_was_drunk()
@@ -178,9 +178,9 @@ def fifth_decision():
     Raises ValueError if the user enters an invalid value and loops the input requirement until the value
     is considered valid.
     """
-    print("\nEnter 1 or 2.\n")
+    print("\nHe was aggressive.\n2. He was drunk.\n")
     while True:
-        decide = input('1. He was aggressive.\n2. He was drunk.\n')
+        decide = getpass.getpass(prompt = "\nEnter 1 or 2.\n")
         try:
             if int(decide) == 1:
                 he_was_aggressive()
@@ -217,9 +217,9 @@ def sixth_question():
     Raises ValueError if the user enters an invalid value and loops the input requirement until the value
     is considered valid.
     """
-    print("\nEnter 1 or 2.\n")
+    print("\n1. He was drunk.\n2. He might not have been drunk.\n")
     while True:
-        decide = input('1. He was drunk.\n2. He might not have been drunk.\n')
+        decide = getpass.getpass(prompt = "\nEnter 1 or 2.\n")
         try:
             if int(decide) == 1:
                 he_was_drunk()
@@ -246,9 +246,9 @@ def seventh_question():
     Raises ValueError if the user enters an invalid value and loops the input requirement until the value
     is considered valid.
     """
-    print("\nEnter 1.\n")
+    print("\n1. We argued.\n")
     while True:
-        decide = input('1. We argued.\n')
+        decide = getpass.getpass(prompt = "\nEnter 1.\n")
         try:
             if int(decide) == 1:
                 we_argued()
@@ -265,9 +265,9 @@ def eighth_question():
     Raises ValueError if the user enters an invalid value and loops the input requirement until the value
     is considered valid.
     """
-    print("\nEnter 1.\n")
+    print("\n1. Question the findings.\n")
     while True:
-        decide = input('1. Question the findings.\n')
+        decide = getpass.getpass(prompt = "\nEnter 1.\n")
         try:
             if int(decide) == 1:
                 question_findings()
@@ -303,9 +303,9 @@ def ninth_question():
     Raises ValueError if the user enters an invalid value and loops the input requirement until the value
     is considered valid.
     """
-    print("\nEnter 1.\n")
+    print("\n1. He attacked me.\n")
     while True:
-        decide = input('1. He attacked me.\n')
+        decide = getpass.getpass(prompt = "\nEnter 1.\n")
         try:
             if int(decide) == 1:
                 he_attacked_me()
@@ -330,9 +330,9 @@ def tenth_question():
     Raises ValueError if the user enters an invalid value and loops the input requirement until the value
     is considered valid.
     """
-    print("\nEnter 1.\n")
+    print("\n1. Listen to the officer.\n")
     while True:
-        decide = input('1. Listen to the officer.\n')
+        decide = getpass.getpass(prompt = "\nEnter 1.\n")
         try:
             if int(decide) == 1:
                 listen_to_officer_1()
@@ -349,9 +349,9 @@ def eleventh_question():
     Raises ValueError if the user enters an invalid value and loops the input requirement until the value
     is considered valid.
     """
-    print("\nEnter 1.\n")
+    print("\n1. Listen to the officer.\n")
     while True:
-        decide = input('1. Listen to the officer.\n')
+        decide = getpass.getpass(prompt = "\nEnter 1.\n")
         try:
             if int(decide) == 1:
                 listen_to_officer_2()

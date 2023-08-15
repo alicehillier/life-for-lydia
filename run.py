@@ -12,10 +12,9 @@ def story_selector():
         2: "Chapter Two: The Interview"
     }
 
-    print("Enter 1 or 2 to start reading the selected chapter.\n")
     print("1. Chapter One: The Morning After.\n2. Chapter Two: The Interview.\n")
     while True:
-        story_selected = input("")
+        story_selected = getpass.getpass(prompt = "Enter 1 or 2 to start reading the selected chapter.")
         try:
             if int(story_selected) == 1:
                 print(f"Start reading {chapters[int(story_selected)]}?\n")

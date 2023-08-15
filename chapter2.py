@@ -1,4 +1,4 @@
-from chapter1 import error_statements
+from chapter1 import error_statements, getpass
 from datetime import datetime
 
 lydia = {

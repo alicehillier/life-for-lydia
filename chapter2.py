@@ -20,6 +20,14 @@ simon = {
     'Toxicology Report': 'No toxins found'
 }
 
+def lydias_file():
+    for key, value in lydia.items():
+        print("\n{}: {}".format(key, value))
+
+def simons_file():
+    for key, value in simon.items():
+        print("\n{}: {}\n".format(key, value))
+
 date = datetime.now()
 today = date.strftime("%A, %B %d, %Y")
 time_now = datetime.now().time()
@@ -31,8 +39,8 @@ def chapter2():
     print("'Officers present are Smith, badge 247800, and Anderson, badge 310010.'")
     print("'Lydia, is this information correct?'") 
     print("The officer opened his file at the first page and pointed to the information.")
-    print(lydia)
-    print("I nod.")
+    lydias_file()
+    print("\nI nod.")
     print("'Any idea why you are here?'")
     first_decision()
 
@@ -62,8 +70,8 @@ def yes():
     print("I nod slightly.\n 'Enlighten me,' he says.")
     print("'My husband,' I say.")
     print("The officer turns to the next page in the file and spins it around to show me.")
-    print(simon)
-    print("'Is this your husband, Lydia?' the officer asks.")
+    simons_file()
+    print("\n'Is this your husband, Lydia?' the officer asks.")
     print("'Yes,' I say.")
     print("'What happened with your husband?' he asks.")
     second_decision()
@@ -335,7 +343,6 @@ def listen_to_officer_1():
     print("'Look, Lydia,' the officer says. 'Charges are going to be made, okay?'")
     print("I nod, close to tears.")
     print(f"'Interview closing at {time}. Suspect is detained and awaiting charges,' the officer says.")
-
 
 def listen_to_officer_2():
     print("'Lydia, what you\’ve shared with us today has been nothing short of preposterous,' the officer says.")

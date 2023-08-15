@@ -20,20 +20,20 @@ def story_selector():
                 print(f"Start reading {chapters[int(story_selected)]}?\n")
                 print("1. Yes.\n2. No.\n")
                 while True:
-                    confirm_story = input("")
+                    confirm_story = getpass.getpass(prompt = "Enter 1 or 2.\n")
                     if int(confirm_story) == 1:
                         chapter1()
                     elif int(confirm_story) == 2:
-                        story_selector()
+                        continue
             elif int(story_selected) == 2:
                 print(f"Start reading {chapters[int(story_selected)]}?\n")
                 print("1. Yes.\n2. No.\n")
                 while True:
-                    confirm_story = input("")
+                    confirm_story = getpass.getpass(prompt = "Enter 1 or 2.\n")
                     if int(confirm_story) == 1:
                         chapter2()
                     elif int(confirm_story) == 2:
-                        story_selector()
+                        continue
             else:
                 raise ValueError
         except ValueError:

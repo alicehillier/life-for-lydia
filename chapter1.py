@@ -6,6 +6,8 @@ def error_statements(decide):
         print(f"You entered {decide}. That's not a number! Please enter a valid number from the options above!\n")
     elif decide.isspace():
         print("You didn't enter anything! Please enter a valid number from the options above!\n")
+    elif not decide:
+        print("You didn't enter anything! Please enter a valid number from the options above!\n")
     else:
         print(f"You entered {decide}. Please enter a valid number from the options above!\n")
 

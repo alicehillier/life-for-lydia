@@ -178,7 +178,7 @@ def fifth_decision():
     Raises ValueError if the user enters an invalid value and loops the input requirement until the value
     is considered valid.
     """
-    print("He was aggressive.\n2. He was drunk.\n")
+    print("1. He was aggressive.\n2. He was drunk.\n")
     while True:
         decide = getpass.getpass(prompt = "Enter 1 or 2.\n")
         try:
@@ -367,6 +367,7 @@ def listen_to_officer_1():
     "I nod, close to tears.\n"
     f"'Interview closing at {time}. Suspect is detained and awaiting charges,'\n"
     "the officer says.\n")
+    twelfth_question()
 
 def listen_to_officer_2():
     print("'Lydia, what you\’ve shared with us today has been nothing short of\n"
@@ -378,3 +379,52 @@ def listen_to_officer_2():
     "yourself. Officer Anderson will return you to your cell.'\n"
     f"'Interview closing at {time}. Suspect is detained and awaiting charges,'\n"
     "the officer says.\n")
+    thirteenth_question()
+
+def twelfth_question():
+    """
+    Processes the user's input, calling the relevant function in accordance with the user's selection.
+    Raises ValueError if the user enters an invalid value and loops the input requirement until the value
+    is considered valid.
+    """
+    print("1. View Charges.\n")
+    while True:
+        decide = getpass.getpass(prompt = "Enter 1.\n")
+        try:
+            if int(decide) == 1:
+                view_charges_1()
+                break
+            else:
+                raise ValueError
+        except ValueError:
+            error_statements(decide)
+            continue
+
+def thirteenth_question():
+    """
+    Processes the user's input, calling the relevant function in accordance with the user's selection.
+    Raises ValueError if the user enters an invalid value and loops the input requirement until the value
+    is considered valid.
+    """
+    print("1. View Charges.\n")
+    while True:
+        decide = getpass.getpass(prompt = "Enter 1.\n")
+        try:
+            if int(decide) == 1:
+                view_charges_2()
+                break
+            else:
+                raise ValueError
+        except ValueError:
+            error_statements(decide)
+            continue
+    
+def view_charges_1():
+    lydia.popitem('Reason for Arrest')
+    lydia.update({'Charges': 'Manslaughter'})
+    lydias_file()
+
+def view_charges_2():
+    lydia.pop('Reason for Arrest')
+    lydia.update({'Charges': 'Murder'})
+    lydias_file()

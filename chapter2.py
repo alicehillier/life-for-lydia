@@ -1,4 +1,4 @@
-from chapter1 import error_statements, getpass, make_decision
+from chapter1 import error_statements, getpass, make_decision, go_to_next_step
 from datetime import datetime
 
 lydia = {
@@ -32,25 +32,6 @@ date = datetime.now()
 today = date.strftime("%A, %B %d, %Y")
 time_now = datetime.now().time()
 time = time_now.strftime("%H:%M")
-
-def go_to_next_step(options):
-    """
-    Processes the user's input, calling the relevant function in accordance with the user's selection.
-    Raises ValueError if the user enters an invalid value and loops the input requirement until the value
-    is considered valid.
-    """
-    print(f"1. {options[1]}\n")
-    while True:
-        decide = getpass.getpass(prompt = "Enter 1.\n")
-        try:
-            if int(decide) == 1:
-                options[2]()
-                break
-            else:
-                raise ValueError
-        except ValueError:
-            error_statements(decide)
-            continue
 
 def chapter2():
     print("\nThe officer drops the file onto the desk and leans over to turn on\n"
@@ -217,7 +198,7 @@ def he_attacked_me():
     "him to let me go and he just... attacked me,' I say.\n"
     "'And then?' the officer asks.\n"
     "'I don't remember,' I say.\n")
-    option = {
+    options = {
         1: 'Listen to the officer.',
         2: listen_to_officer_2
     }

@@ -15,18 +15,6 @@ def error_statements(decide):
     else:
         print(f"You entered {decide}. Please enter a valid number from the options above!\n")
 
-def wrong_decision():
-    while True:
-        decide = getpass.getpass(prompt = "Enter 1.\n")
-        try:
-            if int(decide) == 1:
-                break
-            else:
-                raise ValueError
-        except ValueError:
-            error_statements(decide)
-            continue
-
 def make_decision(options):
     """
     Processes the user's input, calling the relevant function in accordance with the user's selection.
@@ -43,6 +31,25 @@ def make_decision(options):
                 break
             elif int(decide) == 2:
                 options[4]()
+                break
+            else:
+                raise ValueError
+        except ValueError:
+            error_statements(decide)
+            continue
+
+def go_to_next_step(options):
+    """
+    Processes the user's input, calling the relevant function in accordance with the user's selection.
+    Raises ValueError if the user enters an invalid value and loops the input requirement until the value
+    is considered valid.
+    """
+    print(f"1. {options[1]}\n")
+    while True:
+        decide = getpass.getpass(prompt = "Enter 1.\n")
+        try:
+            if int(decide) == 1:
+                options[2]()
                 break
             else:
                 raise ValueError
@@ -90,9 +97,11 @@ def delay_it():
     Prints lines of the story and calls for the user to make the next decision.
     """
     print("I make a cup of tea. I can’t put this off much longer…\n")
-    print("1. Do it.\n")
-    wrong_decision()
-    do_it()
+    options = {
+        1: 'Do it.',
+        2: do_it
+    }
+    go_to_next_step(options)
 
 def try_to_wake_him():
     """
@@ -100,9 +109,11 @@ def try_to_wake_him():
     Prints lines of the story and calls for the user to make the next decision.
     """
     print("At this point, it seems pointless to try to wake him up.\n")
-    print("1. Clean up.\n")
-    wrong_decision()
-    clean_up()
+    options = {
+        1: 'Clean up.',
+        2: clean_up
+    }
+    go_to_next_step(options)
 
 def clean_up():
     """
@@ -121,9 +132,11 @@ def clean_up():
 
 def get_a_mop_1():
     print("I don’t think a mop is the best choice here.\n")
-    print("1. Get a dustpan and brush.\n")
-    wrong_decision()
-    get_a_dustpan()
+    options = {
+        1: 'Get a dustpan and brush.',
+        2: get_a_dustpan
+    }
+    go_to_next_step(options)
 
 def get_a_dustpan():
     print("I retrieve the dustpan and brush from the cupboard under the kitchen\n"
@@ -139,33 +152,20 @@ def get_a_dustpan():
 
 def get_tissues():
     print("Tissues aren’t going to be enough…\n")
-    print("1. Get towels.\n")
-    wrong_decision()
-    get_towels()
+    options = {
+        1: 'Get towels.',
+        2: get_towels
+    }
+    go_to_next_step(options)
 
 def get_towels():
     print("It takes a few towels, but they soak up most of the blood. I’ll have\n"
     "to use a mop for the rest.\n")
-    fifth_decision()
-
-def fifth_decision():
-    """
-    Processes the user's input, calling the relevant function in accordance with the user's selection.
-    Raises ValueError if the user enters an invalid value and loops the input requirement until the value
-    is considered valid.
-    """
-    print("1. Get a mop.\n")
-    while True:
-        decide = getpass.getpass(prompt = "Enter 1.\n")
-        try:
-            if int(decide) == 1:
-                get_a_mop_2()
-                break
-            else:
-                raise ValueError
-        except ValueError:
-            error_statements(decide)
-            continue
+    options = {
+        1: 'Get a mop.',
+        2: get_a_mop_2
+    }
+    go_to_next_step(options)
 
 def get_a_mop_2():
     print("As I make my way downstairs, I hear a barrage of heavy bangs on the\n"
@@ -196,7 +196,11 @@ def ignore_it():
     "the white-painted wood. That’s why my hand slipped earlier...\n"
     "I hear the squeak of metal and look at the door. The letterbox is open and\n"
     "dark eyes glare at me.\n")
-    ninth_decision()
+    options = {
+        1: 'Escape.',
+        2: escape
+    }
+    go_to_next_step(options)
 
 def look_for_stains():
     print("I check my clothes again and see some splashes of blood on my\n"
@@ -205,7 +209,11 @@ def look_for_stains():
     "blood. I hear the squeak of metal and look at the door. The letterbox is\n"
     "open and dark eyes glare at me as I stand on the stairs.\n"
     "'We\'re responding to a call. Open the door, ma\'am,' the man says.\n")
-    ninth_decision()
+    options = {
+        1: 'Escape.',
+        2: escape
+    }
+    go_to_next_step(options)
 
 def open_it():
     print("I try to compose myself and open the door with a soft smile. In front\n"
@@ -216,51 +224,21 @@ def open_it():
     "'Can we come in?'”' The older man asks.\n"
     "I try to think of a response, but my mind is blank. I feel as though my\n"
     "heart has stopped. The man steps towards me.\n")
-    eighth_decision()
-
-def eighth_decision():
-    """
-    Processes the user's input, calling the relevant function in accordance with the user's selection.
-    Raises ValueError if the user enters an invalid value and loops the input requirement until the value
-    is considered valid.
-    """
-    print("1. Think of an excuse.\n")
-    while True:
-        decide = getpass.getpass(prompt = "Enter 1.\n")
-        try:
-            if int(decide) == 1:
-                think_of_excuse()
-                break
-            else:
-                raise ValueError
-        except ValueError:
-            error_statements(decide)
-            continue
+    options = {
+        1: 'Think of an excuse.',
+        2: think_of_excuse
+    }
+    go_to_next_step(options)
 
 def think_of_excuse():
     print("'I... sorry, I was just about to go out,' I say.\n"
     "'In your dressing gown, Miss?' the older officer says.\n"
     "I slam the door shut.\n")
-    ninth_decision()
-
-def ninth_decision():
-    """
-    Processes the user's input, calling the relevant function in accordance with the user's selection.
-    Raises ValueError if the user enters an invalid value and loops the input requirement until the value
-    is considered valid.
-    """
-    print("1. Escape.\n")
-    while True:
-        decide = getpass.getpass(prompt = "Enter 1.\n")
-        try:
-            if int(decide) == 1:
-                escape()
-                break
-            else:
-                raise ValueError
-        except ValueError:
-            error_statements(decide)
-            continue
+    options = {
+        1: 'Escape.',
+        2: escape
+    }
+    go_to_next_step(options)
 
 def escape():
     print("I rush to the kitchen to escape out the back door. As I trudge\n"

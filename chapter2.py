@@ -1,4 +1,4 @@
-from chapter1 import error_statements, getpass
+from chapter1 import error_statements, getpass, make_decision
 from datetime import datetime
 
 lydia = {
@@ -43,29 +43,13 @@ def chapter2():
     lydias_file()
     print("\nI nod.\n"
     "'Any idea why you\'re here?' he asks.\n")
-    first_decision()
-
-def first_decision():
-    """
-    Processes the user's input, calling the relevant function in accordance with the user's selection.
-    Raises ValueError if the user enters an invalid value and loops the input requirement until the value
-    is considered valid.
-    """
-    print('1. Yes.\n2. No.\n')
-    while True:
-        decide = getpass.getpass(prompt = "Enter 1 or 2.\n")
-        try:
-            if int(decide) == 1:
-                yes()
-                break
-            elif int(decide) == 2:
-                no()
-                break
-            else:
-                raise ValueError
-        except ValueError:
-            error_statements(decide)
-            continue
+    options = {
+        1: 'Yes.',
+        2: 'No.',
+        3: yes,
+        4: no
+    }
+    make_decision(options)
 
 def yes():
     print("I nod slightly.\n'Enlighten me,' he says.\n'My husband,' I say.\n"
@@ -75,70 +59,50 @@ def yes():
     print("\n'Is this your husband, Lydia?' the officer asks.\n"
     "'Yes,' I say.\n"
     "'What\'s happened with your husband?' he asks.\n")
-    second_decision()
+    options = {
+        1: 'Explain.',
+        2: 'Say nothing.',
+        3: explain,
+        4: say_nothing
+    }
+    make_decision(options)
 
 def no():
     print("I curl my lip, raise my eyebrows and stare at the table.\n"
     "'Care to explain why you were covered in blood when we found you,\n"
     "or why you tried to flee? Perhaps you would like to explain the \n"
     "situation in your bedroom?'\n")
-    second_decision()
-
-def second_decision():
-    """
-    Processes the user's input, calling the relevant function in accordance with the user's selection.
-    Raises ValueError if the user enters an invalid value and loops the input requirement until the value
-    is considered valid.
-    """
-    print("1. Explain.\n2. Say Nothing.\n")
-    while True:
-        decide = getpass.getpass(prompt = "Enter 1 or 2.\n")
-        try:
-            if int(decide) == 1:
-                explain()
-                break
-            elif int(decide) == 2:
-                say_nothing()
-                break
-            else:
-                raise ValueError
-        except ValueError:
-            error_statements(decide)
-            continue
+    options = {
+        1: 'Explain.',
+        2: 'Say nothing.',
+        3: explain,
+        4: say_nothing
+    }
+    make_decision(options)
 
 def explain():
     print("'I found out that he was having an affair,' I say.\n"
     "'So you killed him?' the officer asks.\n"
     "'No,' I say.\n")
-    third_decision()
+    options = {
+        1: 'It was an accident.',
+        2: 'It was self-defence.',
+        3: accident,
+        4: self_defence
+    }
+    make_decision(options)
 
 def say_nothing():
     print("'Given that we found your husband dead, with several stab wounds,\n"
     "in your bedroom, and you were covered in blood and running away...'\n"
     "'It looks bad for you,' the officer says.\n")
-    third_decision()
-
-def third_decision():
-    """
-    Processes the user's input, calling the relevant function in accordance with the user's selection.
-    Raises ValueError if the user enters an invalid value and loops the input requirement until the value
-    is considered valid.
-    """
-    print("1. It was an accident.\n2. It was self-defence.\n")
-    while True:
-        decide = getpass.getpass(prompt = "Enter 1 or 2.\n")
-        try:
-            if int(decide) == 1:
-                accident()
-                break
-            elif int(decide) == 2:
-                self_defence()
-                break
-            else:
-                raise ValueError
-        except ValueError:
-            error_statements(decide)
-            continue
+    options = {
+        1: 'It was an accident.',
+        2: 'It was self-defence.',
+        3: accident,
+        4: self_defence
+    }
+    make_decision(options)
 
 def accident():
     print("'I was trying to hurt myself. He just... got in the way,' I say.\n"
@@ -151,7 +115,13 @@ def self_defence():
     print("'I told him that I knew he was having an affair,' I say.\n"
     "'He was angry.'\n"
     "'Why would he be angry at you for that?' the officer asks.\n")
-    fifth_decision()
+    options = {
+        1: 'He was aggressive.',
+        2: 'He was drunk.',
+        3: he_was_aggressive,
+        4: he_was_drunk
+    }
+    make_decision(options)
 
 def fourth_decision():
     """
@@ -164,28 +134,6 @@ def fourth_decision():
         decide = getpass.getpass(prompt = "Enter 1.\n")
         try:
             if int(decide) == 1:
-                he_was_drunk()
-                break
-            else:
-                raise ValueError
-        except ValueError:
-            error_statements(decide)
-            continue
-
-def fifth_decision():
-    """
-    Processes the user's input, calling the relevant function in accordance with the user's selection.
-    Raises ValueError if the user enters an invalid value and loops the input requirement until the value
-    is considered valid.
-    """
-    print("1. He was aggressive.\n2. He was drunk.\n")
-    while True:
-        decide = getpass.getpass(prompt = "Enter 1 or 2.\n")
-        try:
-            if int(decide) == 1:
-                he_was_aggressive()
-                break
-            elif int(decide) == 2:
                 he_was_drunk()
                 break
             else:
@@ -209,29 +157,13 @@ def he_was_aggressive():
     "'He could be, or he was?' the officer asks.\n"
     "'He was. He was controlling and he didn\’t have control this time,' I say.\n"
     "'Was he drunk?' he asks.\n")
-    sixth_question()
-
-def sixth_question():
-    """
-    Processes the user's input, calling the relevant function in accordance with the user's selection.
-    Raises ValueError if the user enters an invalid value and loops the input requirement until the value
-    is considered valid.
-    """
-    print("1. He was drunk.\n2. He might not have been drunk.\n")
-    while True:
-        decide = getpass.getpass(prompt = "Enter 1 or 2.\n")
-        try:
-            if int(decide) == 1:
-                he_was_drunk()
-                break
-            elif int(decide) == 2:
-                he_was_not_drunk()
-                break
-            else:
-                raise ValueError
-        except ValueError:
-            error_statements(decide)
-            continue
+    options = {
+        1: 'He was drunk.',
+        2: 'He might not have been drunk.',
+        3: he_was_drunk,
+        4: he_was_not_drunk
+    }
+    make_decision(options)
 
 def he_was_not_drunk():
     print("'Why would you confront a man who you say is aggressive towards you?'\n"

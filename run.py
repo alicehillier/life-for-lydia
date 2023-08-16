@@ -3,14 +3,14 @@ from chapter2 import *
 
 def story_selector():
     """
-    Asks the user to select a story. When the player does so, they are able to view general information about the story 
-    before confirming their selection. Once confirmed, the relevant story will play out.
+    Asks the user to select a story. When the player does so, the chapter1 or chapter2 functions are triggered, and the 
+    selected story will commence.
     """
 
-    chapters = {
-        1: "Chapter One: The Morning After",
-        2: "Chapter Two: The Interview"
-    }
+    # chapters = {
+    #     1: "Chapter One: The Morning After",
+    #     2: "Chapter Two: The Interview"
+    # }
 
     print("1. Chapter One: The Morning After.\n2. Chapter Two: The Interview.\n")
     while True:

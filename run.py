@@ -6,6 +6,10 @@ def story_selector():
     Asks the user to select a story. Selecting either 1 or 2 (as per the instructions) will trigger the confirm_story
     function.
     """
+    
+    title = "LIFE FOR LYDIA\n"
+    print(title.center(40))
+
     chapters = {
         1: "Chapter One: The Morning After",
         2: "Chapter Two: The Interview",

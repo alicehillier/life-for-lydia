@@ -1,7 +1,11 @@
 from chapter1 import error_statements, getpass, make_decision, go_to_next_step
 from datetime import datetime
 
-lydia = {
+def lydias_file():
+    """
+    Prints all keys and values in the 'lydia' dictionary as plain text.
+    """
+    lydia = {
     'Name': 'Lydia Simmons',
     'Date of Birth': '17/04/1983',
     'Status': 'Married',
@@ -9,8 +13,14 @@ lydia = {
     'Previous Convictions': 'None',
     'Reason for Arrest': 'Suspicion of murder'
 }
+    for key, value in lydia.items():
+        print(f"\n{key}: {value}")
 
-simon = {
+def simons_file():
+    """
+    Prints all keys and values in the 'simon' dictionary as plain text.
+    """
+    simon = {
     'Name': 'Simon Simmons',
     'Date of Birth': '23/07/1979',
     'Status': 'Married',
@@ -19,12 +29,6 @@ simon = {
     'Cause of Death': 'Stabbing',
     'Toxicology Report': 'No toxins found'
 }
-
-def lydias_file():
-    for key, value in lydia.items():
-        print(f"\n{key}: {value}")
-
-def simons_file():
     for key, value in simon.items():
         print(f"\n{key}: {value}")
 

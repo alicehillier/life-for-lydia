@@ -254,7 +254,7 @@ def escape():
 
 def surrender():
     print("I look to my left at the end of the alley and see an officer rushing\n"
-    "towards me."
+    "towards me.\n"
     "'Stop!' he yells.\n"
     "I glance to my right. I know I cannot outrun him. I raise my hands and he\n"
     "approaches me.\n"

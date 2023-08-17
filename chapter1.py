@@ -1,19 +1,27 @@
-# Import getpass so the user input is not echoed in the terminal, giving it a better appearance.
+# Import getpass so the user input is not echoed in the terminal, giving it a 
+# better appearance.
 import getpass
+
 
 def error_statements(decide):
     """
-    The error statements that will be displayed to the user if they do not enter an assigned value. The statements
-    take into account alphabet, only spaces, no input, and a general statement to cover remaining scenarios.
+    The error statements that will be displayed to the user if they do not enter 
+    an assigned value. The statements take into account alphabet, only spaces, 
+    no input, and a general statement to cover remaining scenarios.
     """
     if decide.isalpha():
-        print(f"You entered {decide}. That's not a number! Please enter a valid number from the options above!\n")
+        print(f"You entered {decide}. That's not a number!\n"
+        "Please enter a valid number from the options above!\n")
     elif decide.isspace():
-        print("You didn't enter anything! Please enter a valid number from the options above!\n")
+        print("You didn't enter anything!\n" 
+        "Please enter a valid number from the options above!\n")
     elif not decide:
-        print("You didn't enter anything! Please enter a valid number from the options above!\n")
+        print("You didn't enter anything!\n" 
+        "Please enter a valid number from the options above!\n")
     else:
-        print(f"You entered {decide}. Please enter a valid number from the options above!\n")
+        print(f"You entered {decide}.\n" 
+        "Please enter a valid number from the options above!\n")
+
 
 def make_decision(options):
     """
@@ -24,7 +32,6 @@ def make_decision(options):
     the user's selection. Raises ValueError if the user enters an invalid value 
     and loops the input requirement until the value is considered valid.
     """
-
     print(f"1. {options[1]}\n2. {options[2]}\n")
     while True:
         decide = getpass.getpass(prompt = "Enter 1 or 2.\n")
@@ -40,6 +47,7 @@ def make_decision(options):
         except ValueError:
             error_statements(decide)
             continue
+
 
 def go_to_next_step(options):
     """
@@ -63,6 +71,7 @@ def go_to_next_step(options):
             error_statements(decide)
             continue
 
+
 def chapter1():
     """
     Prints the opening lines of the story and brings the user to the first 
@@ -81,6 +90,7 @@ def chapter1():
     }
     make_decision(options)
 
+
 def do_it():
     """
     Runs when the user selects '1. Do it.' at the decision point in the chapter1 
@@ -98,7 +108,8 @@ def do_it():
         4: clean_up
     }
     make_decision(options)
-    
+
+
 def delay_it():
     """
     Runs when the user selects '2. Delay it.' at the decision point in the 
@@ -112,6 +123,7 @@ def delay_it():
     }
     go_to_next_step(options)
 
+
 def try_to_wake_him():
     """
     Runs when the user selects '1. Try to wake him.' at the decision point in 
@@ -124,6 +136,7 @@ def try_to_wake_him():
         2: clean_up
     }
     go_to_next_step(options)
+
 
 def clean_up():
     """
@@ -142,6 +155,7 @@ def clean_up():
     }
     make_decision(options)
 
+
 def get_a_mop_1():
     """
     Runs when the user selects '1. Get a mop.' at the decision point in the 
@@ -154,6 +168,7 @@ def get_a_mop_1():
         2: get_a_dustpan
     }
     go_to_next_step(options)
+
 
 def get_a_dustpan():
     """
@@ -173,6 +188,7 @@ def get_a_dustpan():
     }
     make_decision(options)
 
+
 def get_tissues():
     """
     Runs when the user selects '1. Get tissues.' at the decision point in the 
@@ -185,6 +201,7 @@ def get_tissues():
         2: get_towels
     }
     go_to_next_step(options)
+
 
 def get_towels():
     """
@@ -200,6 +217,7 @@ def get_towels():
         2: get_a_mop_2
     }
     go_to_next_step(options)
+
 
 def get_a_mop_2():
     """
@@ -218,6 +236,7 @@ def get_a_mop_2():
     }
     make_decision(options)
 
+
 def open_the_door():
     """
     Runs when the user selects '1. Open the door.' at the decision point in the 
@@ -232,6 +251,7 @@ def open_the_door():
         4: open_it
     }
     make_decision(options)
+
 
 def ignore_it():
     """
@@ -251,6 +271,7 @@ def ignore_it():
     }
     go_to_next_step(options)
 
+
 def look_for_stains():
     """
     Runs when the user selects '1. Look for stains.' at the decision point in 
@@ -268,6 +289,7 @@ def look_for_stains():
         2: escape
     }
     go_to_next_step(options)
+
 
 def open_it():
     """
@@ -289,6 +311,7 @@ def open_it():
     }
     go_to_next_step(options)
 
+
 def think_of_excuse():
     """
     Runs when the user selects '1. Think of an excuse.' at the decision point in
@@ -303,6 +326,7 @@ def think_of_excuse():
         2: escape
     }
     go_to_next_step(options)
+
 
 def escape():
     """
@@ -321,6 +345,7 @@ def escape():
     }
     make_decision(options)
 
+
 def surrender():
     """
     Runs when the user selects '1. Surrender.' at the decision point in the 
@@ -333,6 +358,7 @@ def surrender():
     "I glance to my right. I know I cannot outrun him. I raise my hands and he\n"
     "approaches me.\n"
     "'Lets have a talk,' he says.\n")
+
 
 def keep_running():
     """

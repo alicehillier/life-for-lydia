@@ -20,12 +20,14 @@ simon = {
     'Toxicology Report': 'No toxins found'
 }
 
+
 def lydias_file():
     """
     Prints all keys and values in the 'lydia' dictionary as plain text.
     """
     for key, value in lydia.items():
         print(f"\n{key}: {value}")
+
 
 def simons_file():
     """
@@ -38,6 +40,7 @@ date = datetime.now()
 today = date.strftime("%A, %B %d, %Y")
 time_now = datetime.now().time()
 time = time_now.strftime("%H:%M")
+
 
 def chapter2():
     """
@@ -62,6 +65,7 @@ def chapter2():
     }
     make_decision(options)
 
+
 def yes():
     """
     Runs when the user selects '1. Yes.' at the decision point in the chapter2 
@@ -83,6 +87,7 @@ def yes():
     }
     make_decision(options)
 
+
 def no():
     """
     Runs when the user selects '2. No.' at the decision point in the chapter2 
@@ -101,6 +106,7 @@ def no():
     }
     make_decision(options)
 
+
 def explain():
     """
     Runs when the user selects '1. Explain.' at the decision point in the yes
@@ -117,6 +123,7 @@ def explain():
         4: self_defence
     }
     make_decision(options)
+
 
 def say_nothing():
     """
@@ -135,6 +142,7 @@ def say_nothing():
     }
     make_decision(options)
 
+
 def accident():
     """
     Runs when the user selects '1. It was an accident.' at the decision point in
@@ -150,6 +158,7 @@ def accident():
         2: he_was_drunk
     }
     go_to_next_step(options)
+
 
 def self_defence():
     """
@@ -168,6 +177,7 @@ def self_defence():
     }
     make_decision(options)
 
+
 def he_was_aggressive():
     """
     Runs when the user selects '1. He was aggressive.' at the decision point 
@@ -185,6 +195,7 @@ def he_was_aggressive():
         4: he_was_not_drunk
     }
     make_decision(options)
+
 
 def he_was_drunk():
     """
@@ -206,6 +217,7 @@ def he_was_drunk():
     }
     go_to_next_step(options)
 
+
 def he_was_not_drunk():
     """
     Runs when the user selects '2. He might not have been drunk.' at the 
@@ -221,6 +233,7 @@ def he_was_not_drunk():
         2: we_argued
     }
     go_to_next_step(options)
+
 
 def we_argued():
     """
@@ -243,6 +256,7 @@ def we_argued():
     }
     go_to_next_step(options)
 
+
 def question_findings():
     """
     Runs when the user selects '1. Question the findings.' at the decision point
@@ -258,6 +272,7 @@ def question_findings():
         2: he_attacked_me
     }
     go_to_next_step(options)
+
 
 def he_attacked_me():
     """
@@ -276,6 +291,7 @@ def he_attacked_me():
     }
     go_to_next_step(options)
 
+
 def listen_to_officer_1():
     """
     Runs when the user selects '1. Listen to the officer.' at the decision point
@@ -291,6 +307,7 @@ def listen_to_officer_1():
         2: view_charges_1
     }
     go_to_next_step(options)
+
 
 def listen_to_officer_2():
     """
@@ -312,7 +329,8 @@ def listen_to_officer_2():
         2: view_charges_2
     }
     go_to_next_step(options)
-    
+
+
 def view_charges_1():
     """
     Runs when the user selects '1. View charges.' at the decision point
@@ -323,6 +341,7 @@ def view_charges_1():
     lydia.popitem('Reason for Arrest')
     lydia.update({'Charges': 'Manslaughter'})
     lydias_file()
+
 
 def view_charges_2():
     """

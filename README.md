@@ -119,24 +119,32 @@ In order to gauge what makes a successful interactive story, I drew on my own ex
 
 #### **First-Time Visitor Goal**
 
--	
+-	I want to learn how to to play the game/interact with the story.
+- I want to be able to quit.
+- I want to make decisions.
+- I want the text to presented to me clearly.
 
 #### **Returning Visitor Goal**
 
--	
+-	I want to select the next chapter.
+- I want to replay the story and make different choices.
+- I want to see the consequences of my decisions.
 
 #### **Frequent Visitor Goal**
 
--	
+- I want to experience all of the possible outcomes.
+- I want to find out new information by making a different choice.	
 
 [Back to top](https://github.com/alicehillier/life-for-lydia/#life-for-lydia)
 
 ### **Scope Plane**
 
 Based on the research conducted in the Strategy Plane, I decided to include the following features in the *Life for Lydia* interactive story:
+
 -	
 
 I ensured that I met the following functionality requirements:
+
 -	
 
 [Back to top](https://github.com/alicehillier/life-for-lydia/#life-for-lydia)

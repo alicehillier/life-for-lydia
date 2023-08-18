@@ -141,23 +141,30 @@ In order to gauge what makes a successful interactive story, I drew on my own ex
 
 Based on the research conducted in the Strategy Plane, I decided to include the following features in the *Life for Lydia* interactive story:
 
--	
+-	A main menu, which includes the title, instructions about how to play and a contents menu.
 
 I ensured that I met the following functionality requirements:
 
--	
+-	Each line of text fits within the terminal for optimal user experience.
+- User inputs are responded to correctly.
+- Errors caused by user input are dealt with appropriately.
 
 [Back to top](https://github.com/alicehillier/life-for-lydia/#life-for-lydia)
 
 ### **Structure Plane**
 
-The contents of the interactive story were carefully considered and selected for their relevance and usefulness to users. 
+The contents of the interactive story were carefully considered and selected for their relevance and usefulness to users.
+
+The project itself is split into three Python files for clarity.
+- *run.py* contains the main menu, with the title, instructions about how to play, and the first decision in which users select the chapter they would like to read.
+- *chapter1.py* contains the entire story for Chapter One.
+- *chapter2.py* contains the entire story for Chapter Two.
 
 [Back to top](https://github.com/alicehillier/life-for-lydia/#life-for-lydia)
 
 ### **Skeleton Plane**
 
-When starting to design my story, I created detailed text documents using Google Docs, and flow diagrams using Figma. 
+When starting to design my story, I created detailed text documents using Google Docs and flow diagrams using Figma. 
 To view the story written out using Google Docs, and the flow diagram I created with Figma , please click on the links below:
 - [Text Document]()
 - [Flow Diagrams]()
@@ -167,6 +174,11 @@ To view the story written out using Google Docs, and the flow diagram I created 
 ### **Surface Plane**
 
 After establishing the content of the interactive story, I began putting together the aesthetics. 
+
+- Dictionaries are formatted as clean text when displayed to the user.
+- Time and dates are formatted in an easy-to-read way when displayed to the user.
+- Ample spacing is provided throughout the program for clarity.
+- A consistent decision format is used to ensure the experience is seamless for the user.
 
 [Back to top](https://github.com/alicehillier/life-for-lydia/#life-for-lydia)
 

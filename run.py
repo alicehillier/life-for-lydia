@@ -5,6 +5,7 @@ from datetime import datetime
 # better appearance.
 import getpass
 
+# Import time to create a delay when the user returns to the main menu.
 import time
 
 # IMPORTANT STORY FUNCTIONS below.
@@ -42,20 +43,27 @@ def make_decision(options):
     while True:
         decide = getpass.getpass(prompt = "Enter 1 or 2.\n")
         try:
+            # If the first option is selected, run the function assigned to 
+            # number 3.
             if int(decide) == 1:
                 options[3]()
                 break
+            # If the second option is selected, run the function assigned to 
+            # number 4.
             elif int(decide) == 2:
                 options[4]()
                 break
+            # If the user enters 0, return to the main menu after a short delay.
             elif int(decide) == 0:
                 print("Looking for the right page...\n")
                 time.sleep(3)
                 print("Aha! Found it!\n")
                 time.sleep(1)
-                story_selector()
+                introduction()
                 break
             else:
+                # If the user enters something else, display the relevant error
+                # statement.
                 raise ValueError
         except ValueError:
             error_statements(decide)
@@ -78,6 +86,13 @@ def go_to_next_step(options):
             if int(decide) == 1:
                 options[2]()
                 break
+            elif int(decide) == 0:
+                print("Looking for the right page...\n")
+                time.sleep(3)
+                print("Aha! Found it!\n")
+                time.sleep(1)
+                introduction()
+                break
             else:
                 raise ValueError
         except ValueError:
@@ -86,13 +101,25 @@ def go_to_next_step(options):
 
 # MAIN MENU code below.
 
+def introduction():
+    title = "LIFE FOR LYDIA\nby Alice Hillier"
+    print(title.center(80))
+    print("Welcome to 'Life for Lydia', an interactive story written by Alice Hillier.")
+    print("To play this game, you'll need to use the number keys on your keyboard.\n"
+    "If you would like to leave the game and return to this page at any point,\n"
+    "enter 0. Be warned though, your progress will not be saved!\n"
+    "Now, I think you're ready to play! Follow the instructions below to get started!\n")
+    options = {
+        1: "Select a Chapter.",
+        2: story_selector
+    }
+    go_to_next_step(options)
+
 def story_selector():
     """
     Asks the user to select a story. Selecting either 1 or 2 (as per the 
     instructions) will trigger the confirm_story function.
     """
-    title = "LIFE FOR LYDIA\n"
-    print(title.center(40))
     chapters = {
         1: "Chapter One: The Morning After",
         2: "Chapter Two: The Interview",
@@ -762,4 +789,5 @@ def view_charges_2():
     lydia.update({'Charges': 'Murder'})
     lydias_file()
 
-story_selector()
+
+introduction()

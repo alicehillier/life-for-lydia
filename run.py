@@ -6,7 +6,21 @@ from datetime import datetime
 import getpass
 
 # Import time to create a delay when the user returns to the main menu.
-import time
+import time, sys, os
+
+
+# THIS CODE WAS TAKE FROM https://www.101computing.net/python-typing-text-effect/
+# and sys, os were imported according to this guide.
+#------------------------------------------------
+def typingPrint(text):
+    for character in text:
+        sys.stdout.write(character)
+        sys.stdout.flush()
+        time.sleep(0.05)
+
+def clearScreen():
+    os.system("clear")
+#------------------------------------------------
 
 # IMPORTANT STORY FUNCTIONS below.
 
@@ -112,7 +126,7 @@ def introduction():
     print("To play this game, you'll need to use the number keys on your keyboard.\n"
     "If you would like to leave the game and return to this page at any point,\n"
     "enter 0. Be warned though, your progress will not be saved!\n"
-    "Now, I think you're ready to play! Follow the instructions below to get started.\n")
+    "\nNow, I think you're ready to play! Follow the instructions below to get started.\n")
     options = {
         1: "Select a Chapter.",
         2: story_selector
@@ -139,7 +153,10 @@ def chapter1():
     Prints the opening lines of the story and brings the user to the first 
     decision point, which will direct the user to the next part of the story. 
     """
-    print("The winter is colder than usual. We haven’t had snow in years, but\n"
+    chapter_one = "Chapter One: The Morning After\n"
+    typingPrint(chapter_one.center(80))
+    time.sleep(1)
+    typingPrint("\nThe winter is colder than usual. We haven’t had snow in years, but\n"
     "now it envelops everything in sight. The birds are long gone, and even the\n"
     "rats that swarmed the street in summer are either in hiding or dead. Webs\n"
     "of ice have gathered on the windows and I can barely make out the shapes\n"
@@ -487,6 +504,10 @@ def chapter2():
     dictionary via the lydias_file function. Contains the first decision, which
     will direct the user to the next part of the story. 
     """
+    time.sleep(1)
+    chapter_two = "Chapter Two: The Interview"
+    print(chapter_two.center(80))
+    time.sleep(1)
     print("\nThe officer drops the file onto the desk and leans over to turn on\n"
     "the recorder.\n"
     f"'Interview with suspect, Lydia Simmons, at {time_now} on {today}.\n"

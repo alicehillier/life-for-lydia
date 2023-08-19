@@ -102,13 +102,17 @@ def go_to_next_step(options):
 # MAIN MENU code below.
 
 def introduction():
-    title = "LIFE FOR LYDIA by Alice Hillier"
+    title = "LIFE FOR LYDIA"
     print(title.center(80))
-    print("Welcome to 'Life for Lydia', an interactive story written by Alice Hillier.")
+    author = "by Alice Hillier"
+    print(author.center(80))
+    print("\nWelcome to 'Life for Lydia', an interactive story written by Alice\n"
+    "Hillier for the third milestone project in Code Institute's Software Development\n"
+    "(E-Commerce) programme.\n")
     print("To play this game, you'll need to use the number keys on your keyboard.\n"
     "If you would like to leave the game and return to this page at any point,\n"
     "enter 0. Be warned though, your progress will not be saved!\n"
-    "Now, I think you're ready to play! Follow the instructions below to get started!\n")
+    "Now, I think you're ready to play! Follow the instructions below to get started.\n")
     options = {
         1: "Select a Chapter.",
         2: story_selector

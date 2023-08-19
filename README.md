@@ -155,10 +155,12 @@ I ensured that I met the following functionality requirements:
 
 The contents of the interactive story were carefully considered and selected for their relevance and usefulness to users.
 
-The project itself is split into three Python files for clarity.
-- *run.py* contains the main menu, with the title, instructions about how to play, and the first decision in which users select the chapter they would like to read.
-- *chapter1.py* contains the entire story for Chapter One.
-- *chapter2.py* contains the entire story for Chapter Two.
+The project itself is contained within one file, and sections are clearly labelled with a comment.
+- **Imports**: At the top of the file, imports are described with their specific purpose in the program.
+- **Important Functions**: Next, important functions that are key to the program's execution are defined.
+- **Main Menu Content**: Following this is the main menu content, made up of the introduction and story_selector functions.
+- **Chapter One**: After the main menu content, the code for Chapter One is laid out.
+- **Chapter Two**: Finally, the code for Chapter Two is written beneath Chapter One.
 
 [Back to top](https://github.com/alicehillier/life-for-lydia/#life-for-lydia)
 

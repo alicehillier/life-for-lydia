@@ -102,7 +102,7 @@ def go_to_next_step(options):
 # MAIN MENU code below.
 
 def introduction():
-    title = "LIFE FOR LYDIA\nby Alice Hillier"
+    title = "LIFE FOR LYDIA by Alice Hillier"
     print(title.center(80))
     print("Welcome to 'Life for Lydia', an interactive story written by Alice Hillier.")
     print("To play this game, you'll need to use the number keys on your keyboard.\n"

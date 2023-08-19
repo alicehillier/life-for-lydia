@@ -36,7 +36,7 @@ Happy coding!
 
 ![*Life for Lydia* displayed on various devices]()
 
-[Visit my website here](https://alicehillier.github.io/life-for-lydia/)
+[Visit my website here](https://life-for-lydia-bf0c0403fae6.herokuapp.com/)
 
 1. [Introduction](https://github.com/alicehillier/life-for-lydia/#introduction)
 
@@ -186,11 +186,26 @@ After establishing the content of the interactive story, I began putting togethe
 
 ### **Existing Features**
 
+1. An introduction section, containing the title and instructions.
+
+2. A return-to-main-menu option, which is available at every decision point and returns
+the user to the introduction section.
+
+3. Two chapters, which fleshes out the story and provides the user with more opportunities
+to engage.
+
+4. Meaningful choices which allow the user to obtain more information about the story depending
+on their decision.
+
 ### **Features to be implemented in the future**
 
-The following features would be an excellent means to create a fuller experience for the user:
+The following features would be an excellent means of creating a fuller experience for the user:
 
-1. 
+1. More chapters
+
+2. Long-term consequences of your decisions
+
+3. The option to save your progress
 
 [Back to top](https://github.com/alicehillier/life-for-lydia/#life-for-lydia)
 
@@ -202,7 +217,11 @@ The following features would be an excellent means to create a fuller experience
 
 ### **Frameworks, Libraries and Programmes**
 
-- 
+- Google Docs: I used this to write out the story.
+- Figma: I used this to create detailed flow diagrams for the story.
+- Visual Studio Code: I used this local editor to write and edit my code.
+- Git: I committed and recorded my work using Git.
+- Github: I stored my work on Github and recorded its development.
 
 [Back to top](https://github.com/alicehillier/life-for-lydia/#life-for-lydia)
 

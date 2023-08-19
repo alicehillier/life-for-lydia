@@ -9,17 +9,25 @@ import getpass
 import time, sys, os
 
 
-# THIS CODE WAS TAKE FROM https://www.101computing.net/python-typing-text-effect/
+# THIS CODE WAS TAKEN FROM https://www.101computing.net/python-typing-text-effect/
 # and sys, os were imported according to this guide.
 #------------------------------------------------
 def typingPrint(text):
     for character in text:
         sys.stdout.write(character)
         sys.stdout.flush()
-        time.sleep(0.05)
+        time.sleep(0.02)
+
+# THIS CODE WAS TAKEN FROM https://www.codingninjas.com/studio/library/how-to-clear-a-screen-in-python#:~:text=There%20are%20several%20commands%20that,to%20clear%20the%20shell%2Fterminal.
+# and customised.
 
 def clearScreen():
-    os.system("clear")
+    # Use 'cls' to clear console in Windows.
+    if os.name == "nt":
+        os.system("cls")
+    # If the system is not Windows, (e.g. Linux) use 'clear'.
+    else:
+        os.system("clear")
 #------------------------------------------------
 
 # IMPORTANT STORY FUNCTIONS below.
@@ -53,9 +61,9 @@ def make_decision(options):
     the user's selection. Raises ValueError if the user enters an invalid value 
     and loops the input requirement until the value is considered valid.
     """
-    print(f"1. {options[1]}\n2. {options[2]}\n")
+    typingPrint(f"\n1. {options[1]}\n2. {options[2]}\n")
     while True:
-        decide = getpass.getpass(prompt = "Enter 1 or 2.\n")
+        decide = getpass.getpass(prompt = "\nEnter 1 or 2.\n")
         try:
             # If the first option is selected, run the function assigned to 
             # number 3.
@@ -69,9 +77,9 @@ def make_decision(options):
                 break
             # If the user enters 0, return to the main menu after a short delay.
             elif int(decide) == 0:
-                print("Looking for the right page...\n")
+                typingPrint("Looking for the right page...\n")
                 time.sleep(3)
-                print("Aha! Found it!\n")
+                typingPrint("Aha! Found it!\n")
                 time.sleep(1)
                 introduction()
                 break
@@ -93,17 +101,17 @@ def go_to_next_step(options):
     the user's selection. Raises ValueError if the user enters an invalid value 
     and loops the input requirement until the value is considered valid.
     """
-    print(f"1. {options[1]}\n")
+    print(f"\n1. {options[1]}\n")
     while True:
-        decide = getpass.getpass(prompt = "Enter 1.\n")
+        decide = getpass.getpass(prompt = "\nEnter 1.\n")
         try:
             if int(decide) == 1:
                 options[2]()
                 break
             elif int(decide) == 0:
-                print("Looking for the right page...\n")
+                typingPrint("Looking for the right page...\n")
                 time.sleep(3)
-                print("Aha! Found it!\n")
+                typingPrint("Aha! Found it!\n")
                 time.sleep(1)
                 introduction()
                 break
@@ -149,6 +157,7 @@ def story_selector():
 # CHAPTER 1: THE MORNING AFTER code below.
 
 def chapter1():
+    clearScreen()
     """
     Prints the opening lines of the story and brings the user to the first 
     decision point, which will direct the user to the next part of the story. 

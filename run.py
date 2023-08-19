@@ -5,24 +5,7 @@ from datetime import datetime
 # better appearance.
 import getpass
 
-# MAIN MENU code below.
-
-def story_selector():
-    """
-    Asks the user to select a story. Selecting either 1 or 2 (as per the 
-    instructions) will trigger the confirm_story function.
-    """
-    title = "LIFE FOR LYDIA\n"
-    print(title.center(40))
-    chapters = {
-        1: "Chapter One: The Morning After",
-        2: "Chapter Two: The Interview",
-        3: chapter1,
-        4: chapter2
-    }
-    make_decision(chapters)
-
-story_selector()
+import time
 
 # IMPORTANT STORY FUNCTIONS below.
 
@@ -65,6 +48,13 @@ def make_decision(options):
             elif int(decide) == 2:
                 options[4]()
                 break
+            elif int(decide) == 0:
+                print("Looking for the right page...\n")
+                time.sleep(3)
+                print("Aha! Found it!\n")
+                time.sleep(1)
+                story_selector()
+                break
             else:
                 raise ValueError
         except ValueError:
@@ -93,6 +83,23 @@ def go_to_next_step(options):
         except ValueError:
             error_statements(decide)
             continue
+
+# MAIN MENU code below.
+
+def story_selector():
+    """
+    Asks the user to select a story. Selecting either 1 or 2 (as per the 
+    instructions) will trigger the confirm_story function.
+    """
+    title = "LIFE FOR LYDIA\n"
+    print(title.center(40))
+    chapters = {
+        1: "Chapter One: The Morning After",
+        2: "Chapter Two: The Interview",
+        3: chapter1,
+        4: chapter2
+    }
+    make_decision(chapters)
 
 # CHAPTER 1: THE MORNING AFTER code below.
 
@@ -440,8 +447,8 @@ def simons_file():
 
 date = datetime.now()
 today = date.strftime("%A, %B %d, %Y")
-time_now = datetime.now().time()
-time = time_now.strftime("%H:%M")
+get_time_now = datetime.now().time()
+time_now = get_time_now.strftime("%H:%M")
 
 def chapter2():
     """
@@ -451,7 +458,7 @@ def chapter2():
     """
     print("\nThe officer drops the file onto the desk and leans over to turn on\n"
     "the recorder.\n"
-    f"'Interview with suspect, Lydia Simmons, at {time} on {today}.\n"
+    f"'Interview with suspect, Lydia Simmons, at {time_now} on {today}.\n"
     "Officers present are Smith, badge 247800, and Anderson, badge 310010.'\n"
     "'Lydia, is this information correct?' he asks.\n"
     "The officer opens his file at the first page and points to the text.\n")
@@ -754,3 +761,5 @@ def view_charges_2():
     lydia.pop('Reason for Arrest')
     lydia.update({'Charges': 'Murder'})
     lydias_file()
+
+story_selector()

@@ -450,6 +450,14 @@ def surrender():
     "I glance to my right. I know I cannot outrun him. I raise my hands and he\n"
     "approaches me.\n"
     "'Lets have a talk,' he says.\n")
+    typingPrint("\nTo be continued...\n")
+    options = {
+        1: 'Continue reading.',
+        2: 'Return to main menu.',
+        3: chapter2,
+        4: introduction
+    }
+    make_decision(options)
 
 
 def keep_running():
@@ -465,6 +473,14 @@ def keep_running():
     "I have to outrun them. As I turn a corner, something sharp cuts into my\n"
     "foot. I scream and fall forwards, hearing a crack as my knee hits the\n"
     "ground. The men stand over me. I'm done.\n")
+    typingPrint("\nTo be continued...\n")
+    options = {
+        1: 'Continue reading.',
+        2: 'Return to main menu.',
+        3: chapter2,
+        4: introduction
+    }
+    make_decision(options)
 
 # CHAPTER 2: THE INTERVIEW code below.
 
@@ -814,6 +830,12 @@ def view_charges_1():
     lydia.popitem('Reason for Arrest')
     lydia.update({'Charges': 'Manslaughter'})
     lydias_file()
+    typingPrint("\nTo be continued...\n")
+    options = {
+        1: 'Return to main menu.',
+        2: introduction
+    }
+    go_to_next_step(options)
 
 
 def view_charges_2():
@@ -826,6 +848,12 @@ def view_charges_2():
     lydia.pop('Reason for Arrest')
     lydia.update({'Charges': 'Murder'})
     lydias_file()
+    typingPrint("\nTo be continued...\n")
+    options = {
+        1: 'Return to main menu.',
+        2: introduction
+    }
+    go_to_next_step(options)
 
 
 introduction()

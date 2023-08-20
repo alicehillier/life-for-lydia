@@ -81,7 +81,8 @@ Welcome to *Life for Lydia*, an interactive, terminal-based story powered by Pyt
 interactive story is designed for readers and gamers alike. Choose your own path and make important decisions
 to discover more.
 
-*Life for Lydia* is an interactive story made with Python, created by Alice Hillier for the third project in Code Institute’s Diploma in Software Development programme.
+*Life for Lydia* is an interactive story made with Python, created by Alice Hillier for the third project in Code 
+Institute’s Diploma in Software Development programme.
 
 [Back to top](https://github.com/alicehillier/life-for-lydia/#life-for-lydia)
 
@@ -105,7 +106,8 @@ In order to gauge what makes a successful interactive story, I drew on my own ex
 
 - Offered meaningful choices to the player.
 - The main story remained the same, with alterations according to the players' choices.
-- Making certain choices affected the character's relationships, revealed new information and impacted the lives of other characters.
+- Making certain choices affected the character's relationships, revealed new information and impacted the lives of 
+other characters.
 
 #### **[The Walking Dead]**
 
@@ -139,7 +141,8 @@ In order to gauge what makes a successful interactive story, I drew on my own ex
 
 ### **Scope Plane**
 
-Based on the research conducted in the Strategy Plane, I decided to include the following features in the *Life for Lydia* interactive story:
+Based on the research conducted in the Strategy Plane, I decided to include the following features in the *Life for 
+Lydia* interactive story:
 
 -	A main menu, which includes the title, instructions about how to play and a contents menu.
 
@@ -158,7 +161,7 @@ The contents of the interactive story were carefully considered and selected for
 The project itself is contained within one file, and sections are clearly labelled with a comment.
 - **Imports**: At the top of the file, imports are described with their specific purpose in the program.
 - **Important Functions**: Next, important functions that are key to the program's execution are defined.
-- **Main Menu Content**: Following this is the main menu content, made up of the introduction and story_selector functions.
+- **Main Menu Content**: Following this is the main menu content, made up of introduction and story_selector functions.
 - **Chapter One**: After the main menu content, the code for Chapter One is laid out.
 - **Chapter Two**: Finally, the code for Chapter Two is written beneath Chapter One.
 
@@ -167,7 +170,8 @@ The project itself is contained within one file, and sections are clearly labell
 ### **Skeleton Plane**
 
 When starting to design my story, I created detailed text documents using Google Docs and flow diagrams using Figma. 
-To view the story written out using Google Docs, and the flow diagram I created with Figma , please click on the links below:
+To view the story written out using Google Docs, and the flow diagram I created with Figma , please click on the links 
+below:
 - [Text Document]()
 - [Flow Diagrams]()
 
@@ -229,13 +233,50 @@ The following features would be an excellent means of creating a fuller experien
 
 ## **Issues and Bugs**
 
-1. 
+1.  Issue: There was an issue with setting a timeout before returning to the main menu after '0' was entered by the user. 
+    An error showed that I was attempting to apply the sleep method to a string.
+    
+    Solution: I realised that I had declared 'time' as variable for the current time, which is displayed in Chapter Two.
+    To fix the issue, I simply changed the variable name to 'time_now'. The sleep method then applied to 'time' with no 
+    problems.
+
+2.  Issue: There was a lot of repetitive code which was impacting readability. This was especially noticeable at the 
+    decision point within each of the story's functions.
+
+    Solution: After a lot of online research about how to create a reusable function for this specific purpose, I finally 
+    was able to figure out how use the reusable make_decision function by passing dictionaries with the same name as its 
+    argument. By using the same numbers to represent a different decision in each dictionary, the code could be applied 
+    in any circumstance where the dictionary is called 'options', has strings assigned to numbers 1 and 2, and functions 
+    assigned to numbers 3 and 4.
+
+3.  Issue: At decision points where only one option is available, the make_decision function could not be applied. The 
+    code was still repetitive.
+
+    Solution: Using the code from make_decision, I applied the same logic to create a function called go_to_next_step,
+    which took the same argument of 'options' for consistency. The only changes necessary were to the calling of items 
+    in the dictionary. Instead of having 4 numbers, there were only 2 required. The first would be the string, which 
+    would be displayed to the user as a print statement, and the second number would be the function.
+
+4.  Issue: The code contained a lot of print statements, which I had used to separate lines when they are being
+    displayed to the user. This made the code very heavy and less readable.
+
+    Solution: I removed a majority of the print statements and instead continued one long print statement across 
+    several lines. For clarity, I ensured that the lines were not excessively long and were well-structured. I regularly
+    used '\n' as well as breaking the lines in the code so that is would be easy to read.
+
+5.  Issue: The echoing of user input in the console made the appearance of the story confusing and difficult to read. 
+
+    Solution: Having done some research online, I found that getpass was a suitable fix, as the user's input would not
+    be printed to the console. I replaced all inputs with getpass, which greatly improved readability and produced a
+    cleaner look.
+
 
 [Back to top](https://github.com/alicehillier/life-for-lydia/#life-for-lydia)
 
 ## **Deployment**
 
-The project was developed using Visual Studio Code as the code editor, committed to Git as a local repository, and then pushed to GitHub for storage.
+The project was developed using Visual Studio Code as the code editor, committed to Git as a local repository, and then 
+pushed to GitHub for storage.
 
 ### **Deployment to Heroku**
 

@@ -95,14 +95,10 @@ In order to gauge what makes a successful interactive story, I drew on my own ex
 
 #### **[Goosebumps]**
 
-![] 
-
 -	Offered meaningful choices to the reader.
 - Players turned to the page indicated based on their choice.
 
 #### **[Assassin's Creed]**
-
-![]
 
 - Offered meaningful choices to the player.
 - The main story remained the same, with alterations according to the players' choices.
@@ -114,8 +110,6 @@ other characters.
 - Offered meaningful choices to the player.
 - The main story remained the same, with alterations according to the players' choices.
 - Making certain choices affected the character's relationships and future opportunities.
-
-![]
 
 ### **User Stories**
 
@@ -144,11 +138,12 @@ other characters.
 Based on the research conducted in the Strategy Plane, I decided to include the following features in the *Life for 
 Lydia* interactive story:
 
--	A main menu, which includes the title, instructions about how to play and a contents menu.
+- A main menu, which includes the title, instructions about how to play, and a contents menu.
+- Two chapters, allowing the user to explore more of the story.
 
 I ensured that I met the following functionality requirements:
 
--	Each line of text fits within the terminal for optimal user experience.
+- Each line of text fits within the terminal for optimal user experience.
 - User inputs are responded to correctly.
 - Errors caused by user input are dealt with appropriately.
 
@@ -169,11 +164,10 @@ The project itself is contained within one file, and sections are clearly labell
 
 ### **Skeleton Plane**
 
-When starting to design my story, I created detailed text documents using Google Docs and flow diagrams using Figma. 
-To view the story written out using Google Docs, and the flow diagram I created with Figma , please click on the links 
-below:
-- [Text Document]()
-- [Flow Diagrams]()
+When starting to design my story, I created detailed flow diagrams using Figma to map out both chapters of the story. 
+To view the flow diagrams, please click on the link below:
+
+- [Flow Diagrams](assets/images/life-for-lydia-flow-diagrams.pdf)
 
 [Back to top](https://github.com/alicehillier/life-for-lydia/#life-for-lydia)
 
@@ -296,6 +290,8 @@ This project was deployed to Heroku by taking the following steps:
 10. Search for your repository and connect to it.
 11. Enable automatic deploys if you are continuing to work on your app.
 12. Finally, deploy branch and watch Heroku do its magic! 
+
+[Click here](https://devcenter.heroku.com/articles/git) for more information about different deployment methods with Heroku.
 
 ### **Forking the GitHub Repository**
 

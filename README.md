@@ -235,6 +235,7 @@ The following features would be an excellent means of creating a fuller experien
 - Visual Studio Code: I used this local editor to write and edit my code.
 - Git: I committed and recorded my work using Git.
 - Github: I stored my work on Github and recorded its development.
+- Heroku: I deployed my app on Heroku.
 
 [Back to top](https://github.com/alicehillier/life-for-lydia/#life-for-lydia)
 
@@ -355,10 +356,13 @@ Changes made on the local machine (cloned repository) can be pushed to the upstr
 
 ## **Credits**
 
--
+- My husband, Norman, for his constant support.
+- My friends and family for testing my app repeatedly.
 
 ## **Acknowledgements**
 
-- 
+- ChatGPT: for explaining console errors I faced in simple terms.
+- [https://www.codingninjas.com/](https://www.codingninjas.com/studio/library/how-to-clear-a-screen-in-python#:~:text=There%20are%20several%20commands%20that,to%20clear%20the%20shell%2Fterminal.): for explaining how to clear the console depending on which operating system is being used.
+- [https://www.101computing.net/](https://www.101computing.net/python-typing-text-effect/): for providing the code to create a typewriter effect for my app.
 
 [Back to top](https://github.com/alicehillier/life-for-lydia/#life-for-lydia)

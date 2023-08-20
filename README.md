@@ -95,10 +95,18 @@ In order to gauge what makes a successful interactive story, I drew on my own ex
 
 #### **Goosebumps**
 
+![Goosebumps Book Series](assets/images/goosebumps.jpg)
+
+The above image was sourced from [Amazon](https://www.amazon.co.uk/Goosebumps-Books-Collection-Classic-Covers/dp/1407181963/ref=sr_1_1?keywords=goosebumps+books&qid=1692560994&sprefix=goosebumps%2Caps%2C61&sr=8-1).
+
 -	Offered meaningful choices to the reader.
 - Players turned to the page indicated based on their choice.
 
 #### **Assassin's Creed**
+
+![Assassin's Creed: Odyssey](assets/images/assassins-creed.webp)
+
+The above image was sourced from [Ubisoft](https://store.ubisoft.com/uk/assassin-s-creed--odyssey---ultimate-edition/5afda8aa6b54a4271407a877.html?ucid=UWB-ID_151373&maltcode=__UWB_ubisoft.com_______&addinfo=_global%20navigation_entity%20pages__game%20-%20assassins%20creed%20odyssey_global%20nav_global%20nav_action_shop%20:%20shop%20by%20game%20:%20assassins-creed-odyssey_).
 
 - Offered meaningful choices to the player.
 - The main story remained the same, with alterations according to the players' choices.
@@ -106,6 +114,10 @@ In order to gauge what makes a successful interactive story, I drew on my own ex
 other characters.
 
 #### **The Walking Dead**
+
+![The Walking Dead: The Telltale Definitive Series](assets/images/the-walking-dead.jpg)
+
+The above image was sourced from [IGN](https://www.ign.com/games/the-walking-dead-the-telltale-definitive-series).
 
 - Offered meaningful choices to the player.
 - The main story remained the same, with alterations according to the players' choices.

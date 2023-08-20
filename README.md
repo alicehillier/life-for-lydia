@@ -93,19 +93,19 @@ Institute’s Diploma in Software Development programme.
 In order to gauge what makes a successful interactive story, I drew on my own experience of reading books like
 *Goosebumps* and playing games like the more recent editions of *Assassin's Creed* and *Telltale's The Walking Dead*.  
 
-#### **[Goosebumps]**
+#### **Goosebumps**
 
 -	Offered meaningful choices to the reader.
 - Players turned to the page indicated based on their choice.
 
-#### **[Assassin's Creed]**
+#### **Assassin's Creed**
 
 - Offered meaningful choices to the player.
 - The main story remained the same, with alterations according to the players' choices.
 - Making certain choices affected the character's relationships, revealed new information and impacted the lives of 
 other characters.
 
-#### **[The Walking Dead]**
+#### **The Walking Dead**
 
 - Offered meaningful choices to the player.
 - The main story remained the same, with alterations according to the players' choices.
@@ -164,9 +164,10 @@ The project itself is contained within one file, and sections are clearly labell
 
 ### **Skeleton Plane**
 
-When starting to design my story, I created detailed flow diagrams using Figma to map out both chapters of the story. 
-To view the flow diagrams, please click on the link below:
+When starting to design my story, I created detailed stories using Google Docs, and flow diagrams using Figma, to map out both chapters of the story. 
+To view the written chapters and the flow diagrams, please click on the links below:
 
+- [Chapters 1 & 2](/assets/images/life-for-lydia-story.pdf)
 - [Flow Diagrams](assets/images/life-for-lydia-flow-diagrams.pdf)
 
 [Back to top](https://github.com/alicehillier/life-for-lydia/#life-for-lydia)

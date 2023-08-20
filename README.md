@@ -207,11 +207,11 @@ on their decision.
 
 The following features would be an excellent means of creating a fuller experience for the user:
 
-1. More chapters
+1. More chapters.
 
-2. Long-term consequences of your decisions
+2. Long-term consequences of your decisions.
 
-3. The option to save your progress
+3. The option to save your progress.
 
 [Back to top](https://github.com/alicehillier/life-for-lydia/#life-for-lydia)
 
@@ -280,10 +280,22 @@ pushed to GitHub for storage.
 
 ### **Deployment to Heroku**
 
-The project was deployed to Heroku using the following steps:
+The project was deployed to Heroku using GitHub Integration, and by taking the following steps:
 
-1.
-
+1. Click on 'New'.
+2. Enter a name for the app, select a region and click 'Create'.
+3. Go to Settings.
+4. In Settings, scroll down to Config Vars and click 'Reveal Config Vars'.
+5. In the KEY field, enter 'PORT'. In the VALUE field, enter '8000'.
+6. Return to Settings.
+7. In Settings, scroll down to Buildpacks and add the following buildpacks in the order provided: 
+- `heroku/python`
+- `heroku/nodejs`
+8. Go to Deploy.
+9. In the 'Deployment Method' section, select GitHub and connect to your GitHub account.
+10. Search for your repository and connect to it.
+11. Enable automatic deploys if you are continuing to work on your app.
+12. Finally, deploy branch and watch Heroku do its magic! 
 
 [Back to top](https://github.com/alicehillier/life-for-lydia/#life-for-lydia)
 

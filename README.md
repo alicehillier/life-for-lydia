@@ -278,6 +278,12 @@ The following features would be an excellent means of creating a fuller experien
     be printed to the console. I replaced all inputs with getpass, which greatly improved readability and produced a
     cleaner look.
 
+6.  Issue: User feedback suggested that the instructions in the introduction weren't clear enough, as it was only 
+    mentioned that the number keys were needed. In fact, the user is required to type a valid number and then press the
+    'enter' key.
+
+    Solution: I updated the instructions paragraph in the introduction function, providing more clarity and a better
+    user experience.
 
 [Back to top](https://github.com/alicehillier/life-for-lydia/#life-for-lydia)
 

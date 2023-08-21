@@ -16,7 +16,8 @@ def typing_print(text):
         sys.stdout.flush()
         time.sleep(0.02)
 
-# THE CODE BELOW WAS TAKEN FROM https://www.codingninjas.com/studio/library/how-to-clear-a-screen-in-python#:~:text=There%20are%20several%20commands%20that,to%20clear%20the%20shell%2Fterminal.
+# THE CODE BELOW WAS TAKEN FROM:
+# https://www.codingninjas.com/studio/library/how-to-clear-a-screen-in-python
 # and customised.
 
 def clear():
@@ -139,9 +140,10 @@ def introduction():
     typing_print("\n Welcome to 'Life for Lydia', an interactive story written by Alice Hillier\n"
     " for the third milestone project in Code Institute's Software Development\n"
     " (E-Commerce) programme.\n")
-    typing_print("\n To play this game, you'll need to use the number keys on your keyboard.\n"
-    " If you would like to leave the game and return to this page at any point,\n"
-    " enter 0. Be warned though, your progress will not be saved!\n"
+    typing_print("\n To play this game, you'll need to use the number keys on your keyboard\n"
+    " and the enter key. If you would like to leave the game and return to this page at\n"
+    " any point, type '0' and press the enter key. Be warned though, your progress\n"
+    " will not be saved!\n"
     "\n Now, I think you're ready to play! Follow the instructions below to get\n"
     " started.\n")
     options = {

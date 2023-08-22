@@ -819,7 +819,7 @@ def listen_to_officer_2():
     " despite the fact that you were the one drinking from it,' he continues.\n"
     " 'Charges are going to be made and you\'ve made things much worse for\n"
     " yourself. Officer Anderson will return you to your cell.'\n"
-    f" 'Interview closing at {time}. Suspect is detained and awaiting charges,'\n"
+    f" 'Interview closing at {time_now}. Suspect is detained and awaiting charges,'\n"
     " the officer says.\n")
     options = {
         1: 'View charges.',
@@ -835,7 +835,7 @@ def view_charges_1():
     its value from the lydia dictionary and adds a new key and value. Triggers
     the lydias_file function, which will display the information to the user.
     """
-    lydia.popitem('Reason for Arrest')
+    lydia.pop('Reason for Arrest')
     lydia.update({'Charges': 'Manslaughter'})
     lydias_file()
     typing_print("\n To be continued...\n")

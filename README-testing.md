@@ -36,10 +36,10 @@
 ### **Frequent Visitor Goal**
 
 1. I want to experience all of the possible outcomes.
-  -
+  - As there are several decision points in each chapter, the user can explore different options when they replay the story. While alternate outcomes are currently limited, future chapters could be greatly influenced by the decisions made by the user early in the story.
 
 2. I want to find out new information by making a different choice.
-  -
+  - Making certain decisions in the story may reveal new information to the user or affect the story. For example, in chapter one, the user will only know there is blood on the stair bannister if they choose not to open the door. While this may not necessarily affect the outcome of the story, it gives it more depth and allows the user a greater insight into what has happened. 
 
 ## **Validation: PEP8 Linter Results**
 

@@ -25,13 +25,13 @@
 ### **Returning Visitor Goal**
 
 1. I want to select the next chapter.
-  -
+  - The user is able to select which chapter they would like to read, so they are not forced to start from the beginning every time they visit the app. If the user is reading chapter one, they have the option to read chapter two once they reach the end of the chapter. The user can also return to the main menu at any decision point and select a different chapter.
 
 2. I want to replay the story and make different choices.
-  -
+  - A variety of choices are available to the user throughout both chapters. Making different decisions may alter the outcome of the story or provide the user with more information. Therefore, replaying the story can give the user a fuller experience.
 
 3. I want to see the consequences of my decisions.
-  -
+  - The outcome of the story may be altered by the decisions the user makes. For example, in chapter two, the character faces different charges depending on the decisions made by the user. 
 
 ### **Frequent Visitor Goal**
 

@@ -11,16 +11,16 @@
 ### **First-Time Visitor Goal**
 
 1. I want to learn how to to play the game/interact with the story.
-  -  
+  - Instructions are provided in the introduction section of the app.   
 
 2. I want to be able to quit.
-  - 
+  - The instructions state that the user can return to the main menu by entering '0' at any decision point. 
 
 3. I want to make decisions.
-  - 
+  - Decisions are integral to the interactive story and the user is required to make decisions in order to move forward in the story.
 
 4. I want the text to presented to me clearly.
-  -
+  - Dictionaries and current time/date are formatted so that information is displayed in standard text. This ensures that the flow of the story is not interrupted and the user is not confused by the presentation.
 
 ### **Returning Visitor Goal**
 

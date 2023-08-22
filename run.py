@@ -141,9 +141,9 @@ def introduction():
     " for the third milestone project in Code Institute's Software Development\n"
     " (E-Commerce) programme.\n")
     typing_print("\n To play this game, you'll need to use the number keys on your keyboard\n"
-    " and the enter key. If you would like to leave the game and return to this page at\n"
-    " any point, type '0' and press the enter key. Be warned though, your progress\n"
-    " will not be saved!\n"
+    " and the enter key. If you would like to leave the game and return to this page\n"
+    " at any point, type '0' and press the enter key. Be warned though, your\n"
+    " progress will not be saved!\n"
     "\n Now, I think you're ready to play! Follow the instructions below to get\n"
     " started.\n")
     options = {

@@ -45,8 +45,9 @@
 
 ## **User Testing**
 
-1. 
-  - 
+1. User feedback suggested that the instructions in the introduction weren't clear enough, as it was only mentioned that the number keys were needed. In fact, the    
+  user is required to type a valid number and then press the 'enter' key. 
+  - As a result of this feedback, I updated the instructions paragraph in the introduction function, providing more clarity and a better user experience.
 
 2. 
   -

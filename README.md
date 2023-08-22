@@ -127,14 +127,14 @@ The above image was sourced from [IGN](https://www.ign.com/games/the-walking-dea
 
 #### **First-Time Visitor Goal**
 
--	I want to learn how to to play the game/interact with the story.
+- I want to learn how to to play the game/interact with the story.
 - I want to be able to quit.
 - I want to make decisions.
 - I want the text to presented to me clearly.
 
 #### **Returning Visitor Goal**
 
--	I want to select the next chapter.
+- I want to select the next chapter.
 - I want to replay the story and make different choices.
 - I want to see the consequences of my decisions.
 

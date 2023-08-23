@@ -70,13 +70,11 @@ def make_decision(options):
             if int(decide) == 1:
                 clear()
                 options[3]()
-                break
             # If the second option is selected, run the function assigned to
             # number 4.
             elif int(decide) == 2:
                 clear()
                 options[4]()
-                break
             # If the user enters 0, return to the main menu after a short delay.
             elif int(decide) == 0:
                 typing_print(" Looking for the right page...\n")
@@ -85,7 +83,6 @@ def make_decision(options):
                 time.sleep(1)
                 clear()
                 introduction()
-                break
             else:
                 # If the user enters something else, display the relevant error
                 # statement.
@@ -111,7 +108,6 @@ def go_to_next_step(options):
             if int(decide) == 1:
                 clear()
                 options[2]()
-                break
             elif int(decide) == 0:
                 typing_print(" Looking for the right page...\n")
                 time.sleep(2)
@@ -119,7 +115,6 @@ def go_to_next_step(options):
                 time.sleep(1)
                 clear()
                 introduction()
-                break
             else:
                 raise ValueError
         except ValueError:

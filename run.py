@@ -118,7 +118,7 @@ def introduction():
     Displays the title of the story and an introduction to the app. It also
     provides instructions for the game.
     """
-    title = """
+    print("""
                         ██      ██ ███████ ███████ 
                         ██      ██ ██      ██      
                         ██      ██ █████   █████   
@@ -133,10 +133,11 @@ def introduction():
         ██       ██████  ██   ██     ███████    ██    ██████  ██ ██   ██ 
                                                                  
                                                                  
-"""
-    print(title.center(80))
+         """)
     author = "by Alice Hillier\n"
     print(author.center(80))
+    time.sleep(5)
+    clear()
     print("\n Welcome to 'Life for Lydia', an interactive story written by"
           " Alice Hillier\n for the third milestone project in Code"
           " Institute's Software Development\n (E-Commerce) programme.\n")

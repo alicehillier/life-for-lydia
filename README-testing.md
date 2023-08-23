@@ -49,11 +49,11 @@
   user is required to type a valid number and then press the 'enter' key. 
   - As a result of this feedback, I updated the instructions paragraph in the introduction function, providing more clarity and a better user experience.
 
-2. 
-  -
+2. User feedback highlighted minor errors where I hadn't updated the variable name from "time" to "time_now" in the second instance. This caused an issue as I had also imported the time module.
+  - I checked both functions where I had called the variable and saw that I had updated the variable name in the first instance, but not the second. Once I changed the variable name accordingly, there was no longer an issue.
 
-3. 
-  -
+3. User feedback highlighted an error in one of the final functions of chapter two, view_charges_2. This prevented the user from viewing the content as an error was thrown. 
+  - I reviewed the error message and saw that I had given an argument to popitem(). I checked my code in view_charges_1 and saw that I had correctly used the method pop('Reason for Arrest'), but did not do the same for view_charges_2. I changed the method to the same as the one I used in view_charges_1 and the issue no longer persisted, allowing the user to finish the chapter without issues.
 
 4. 
   -

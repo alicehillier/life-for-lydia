@@ -573,7 +573,7 @@ def answer_yes():
     " The officer turns to the next page in the file and spins it around to\n"
     " show me.\n")
     simons_file()
-    typing_print("\n 'Is this your husband, Lydia?' the officer asks.\n"
+    typing_print("\n\n 'Is this your husband, Lydia?' the officer asks.\n"
     " 'Yes,' I say.\n"
     " 'What\'s happened with your husband?' he asks.\n")
     options = {
@@ -797,7 +797,7 @@ def listen_to_officer_1():
     """
     typing_print(" 'Look, Lydia,' the officer says. 'Charges are going to be made.'\n"
     " I nod, close to tears.\n"
-    f" 'Interview closing at {time}. Suspect is detained and awaiting charges,'\n"
+    f" 'Interview closing at {time_now}. Suspect is detained and awaiting charges,'\n"
     " the officer says.\n")
     options = {
         1: 'View charges.',
@@ -835,7 +835,7 @@ def view_charges_1():
     its value from the lydia dictionary and adds a new key and value. Triggers
     the lydias_file function, which will display the information to the user.
     """
-    lydia.pop('Reason for Arrest')
+    lydia.popitem()
     lydia.update({'Charges': 'Manslaughter'})
     lydias_file()
     typing_print("\n To be continued...\n")
@@ -853,7 +853,7 @@ def view_charges_2():
     its value from the lydia dictionary and adds a new key and value. Triggers
     the lydias_file function, which will display the information to the user.
     """
-    lydia.pop('Reason for Arrest')
+    lydia.popitem()
     lydia.update({'Charges': 'Murder'})
     lydias_file()
     typing_print("\n To be continued...\n")

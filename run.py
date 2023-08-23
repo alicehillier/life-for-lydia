@@ -5,18 +5,6 @@ import time
 import sys
 import os
 
-
-# THIS CODE IS FROM https://www.101computing.net/python-typing-text-effect/
-# and sys, os were imported according to this guide.
-
-
-def typing_print(text):
-    """Creates a typewriter effect for the app."""
-    for character in text:
-        sys.stdout.write(character)
-        sys.stdout.flush()
-        time.sleep(0.02)
-
 # THIS CODE IS FROM:
 # https://www.codingninjas.com/studio/library/how-to-clear-a-screen-in-python
 # and customised.
@@ -63,7 +51,7 @@ def make_decision(options):
     with the user's selection. Raises ValueError if the user enters an invalid
     value and loops the input requirement until the value is considered valid.
     """
-    typing_print(f"\n 1. {options[1]}\n 2. {options[2]}\n")
+    print(f"\n 1. {options[1]}\n 2. {options[2]}\n")
     while True:
         decide = getpass.getpass(prompt="\n Enter 1 or 2.\n")
         try:
@@ -79,9 +67,9 @@ def make_decision(options):
                 options[4]()
             # If the user enters 0, return to main menu after a short delay.
             elif int(decide) == 0:
-                typing_print(" Looking for the right page...\n")
+                print(" Looking for the right page...\n")
                 time.sleep(3)
-                typing_print(" Aha! Found it!\n")
+                print(" Aha! Found it!\n")
                 time.sleep(1)
                 clear()
                 introduction()
@@ -111,9 +99,9 @@ def go_to_next_step(options):
                 clear()
                 options[2]()
             elif int(decide) == 0:
-                typing_print(" Looking for the right page...\n")
+                print(" Looking for the right page...\n")
                 time.sleep(2)
-                typing_print(" Aha! Found it!\n")
+                print(" Aha! Found it!\n")
                 time.sleep(1)
                 clear()
                 introduction()
@@ -173,9 +161,9 @@ def chapter1():
     decision point, which will direct the user to the next part of the story.
     """
     chapter_one = "Chapter One: The Morning After\n"
-    typing_print(chapter_one.center(80))
+    print(chapter_one.center(80))
     time.sleep(1)
-    typing_print("\n The winter is colder than usual. We haven't had snow in "
+    print("\n The winter is colder than usual. We haven't had snow in "
                  "years, but\n now it envelops everything in sight. The birds "
                  "are long gone, and even the\n rats that swarmed the street "
                  "in summer are either in hiding or dead. Webs\n of ice have "
@@ -197,7 +185,7 @@ def do_it():
     or delay_it functions. Prints the next part of the story and brings the
     user to the next decision point.
     """
-    typing_print(" I slowly climb the stairs, my hand slipping as I try to "
+    print(" I slowly climb the stairs, my hand slipping as I try to "
                  "hold onto the\n rail. I tighten my grip and continue "
                  "upwards. As I turn to the bedroom, I\n take a deep breath. "
                  "Standing in the doorway, I look at him. I look at the\n "
@@ -217,7 +205,7 @@ def delay_it():
     chapter1 function. Prints the next part of the story and brings the user to
     the next decision point.
     """
-    typing_print(" I make a cup of tea. I can't put this off much longer…\n")
+    print(" I make a cup of tea. I can't put this off much longer…\n")
     options = {
         1: 'Do it.',
         2: do_it
@@ -231,7 +219,7 @@ def try_to_wake_him():
     the do_it function. Prints the next part of the story and brings the user
     to the next decision point.
     """
-    typing_print(" At this point, it seems pointless to try to wake him up.\n")
+    print(" At this point, it seems pointless to try to wake him up.\n")
     options = {
         1: 'Clean up.',
         2: clean_up
@@ -246,7 +234,7 @@ def clean_up():
     function. Prints the next part of the story and brings the user to the next
     decision point.
     """
-    typing_print(" I start by clearing the area around the bed, kicking "
+    print(" I start by clearing the area around the bed, kicking "
                  "clothes to the\n side to clear a path. I'll need something "
                  "to clear up the glass.\n")
     options = {
@@ -264,7 +252,7 @@ def get_a_mop_1():
     clean_up function. Prints the next part of the story and brings the user to
     the next decision point.
     """
-    typing_print(" I don't think a mop is the best choice here.\n")
+    print(" I don't think a mop is the best choice here.\n")
     options = {
         1: 'Get a dustpan and brush.',
         2: get_a_dustpan
@@ -279,7 +267,7 @@ def get_a_dustpan():
     decision point in the get_a_mop_1 function. Prints the next part of the
     story and brings the user to the next decision point.
     """
-    typing_print(" I retrieve the dustpan and brush from the cupboard under "
+    print(" I retrieve the dustpan and brush from the cupboard under "
                  "the kitchen\n sink and begin to clear up the glass. Now "
                  "that's done, I need to get rid of\n all this blood.\n")
     options = {
@@ -297,7 +285,7 @@ def get_tissues():
     get_a_dustpan function. Prints the next part of the story and brings the
     user to the next decision point.
     """
-    typing_print(" Tissues aren't going to be enough…\n")
+    print(" Tissues aren't going to be enough…\n")
     options = {
         1: 'Get towels.',
         2: get_towels
@@ -312,7 +300,7 @@ def get_towels():
     get_tissues function. Prints the next part of the story and brings the user
     to the next decision point.
     """
-    typing_print(" It takes a few towels, but they soak up most of the blood. "
+    print(" It takes a few towels, but they soak up most of the blood. "
                  "I'll have\n to use a mop for the rest.\n")
     options = {
         1: 'Get a mop.',
@@ -327,7 +315,7 @@ def get_a_mop_2():
     get_towels function. Prints the next part of the story and brings the
     user to the next decision point.
     """
-    typing_print(" As I make my way downstairs, I hear a barrage of heavy "
+    print(" As I make my way downstairs, I hear a barrage of heavy "
                  "bangs on the\n front door. I look down at my clothes. I "
                  "can't see any stains. Should I\n open the door?\n")
     options = {
@@ -345,7 +333,7 @@ def open_the_door():
     get_a_mop_2 function. Prints the next part of the story and brings the user
     to the next decision point.
     """
-    typing_print(" Are you sure?\n")
+    print(" Are you sure?\n")
     options = {
         1: 'Look for stains.',
         2: 'Open it.',
@@ -361,7 +349,7 @@ def ignore_it():
     get_a_mop_2 function. Prints the next part of the story and brings the user
     to the next decision point.
     """
-    typing_print(" I continue downstairs, quickly and quietly. As I go to "
+    print(" I continue downstairs, quickly and quietly. As I go to "
                  "open the\n storage cupboard under the stairs, I notice "
                  "blood on my hands. I rush back\n to the stairs and check "
                  "the bannister. Long streaks of blood have stained\n the "
@@ -381,7 +369,7 @@ def look_for_stains():
     the open_the_door function. Prints the next part of the story and brings
     the user to the next decision point.
     """
-    typing_print(" I check my clothes again and see some splashes of blood on "
+    print(" I check my clothes again and see some splashes of blood on "
                  "my\n slippers. As I pull my gown towards me to get a better "
                  "look, the fabric\n sticks to my hands. I pry them away and "
                  "see that they are still wet with\n blood. I hear the squeak "
@@ -402,7 +390,7 @@ def open_it():
     open_the_door function. Prints the next part of the story and brings the
     user to the next decision point.
     """
-    typing_print(" I try to compose myself and open the door with a soft "
+    print(" I try to compose myself and open the door with a soft "
                  "smile. In front\n of me are two police officers.\n"
                  " 'Ma\'am?' the older man says, his brows furrowed.\n"
                  " The younger officer is staring at my hands. I look down at "
@@ -424,7 +412,7 @@ def think_of_excuse():
     in open_it function. Prints the next part of the story and brings the user
     to the next decision point.
     """
-    typing_print(" 'I... sorry, I was just about to go out,' I say.\n"
+    print(" 'I... sorry, I was just about to go out,' I say.\n"
                  " 'In your dressing gown, Miss?' the older officer says.\n"
                  " I slam the door shut.\n")
     options = {
@@ -440,7 +428,7 @@ def escape():
     ignore_it, look_for_stains or think_of_excuse function. Prints the next
     part of the story and brings the user to the next decision point.
     """
-    typing_print(" I rush to the kitchen to escape out the back door. As I "
+    print(" I rush to the kitchen to escape out the back door. As I "
                  "trudge\n through the thick snow, my slippers drenched and "
                  "my feet freezing, I reach\n the back alley. I hear the "
                  "officers shouting something at me.\n")
@@ -459,12 +447,12 @@ def surrender():
     escape function. Prints the next part of the story and brings the
     user to the next decision point.
     """
-    typing_print(" I look to my left at the end of the alley and see an "
+    print(" I look to my left at the end of the alley and see an "
                  "officer rushing\n towards me.\n 'Stop!' he yells.\n"
                  " I glance to my right. I know I cannot outrun him. I raise "
                  "my hands and he\n approaches me.\n 'Lets have a talk,' he "
                  "says.\n")
-    typing_print("\n To be continued...\n")
+    print("\n To be continued...\n")
     options = {
         1: 'Continue reading.',
         2: 'Return to main menu.',
@@ -480,7 +468,7 @@ def keep_running():
     escape function. Prints the next part of the story and brings the
     user to the next decision point.
     """
-    typing_print(" I kick off my slippers and my feet are raw. I head right "
+    print(" I kick off my slippers and my feet are raw. I head right "
                  "and follow\n the alley as it winds between houses. I glance "
                  "behind me briefly and see\n the two officers.\n"
                  " 'Stop!' one of the men yells.\n"
@@ -488,7 +476,7 @@ def keep_running():
                  "cuts into my\n foot. I scream and fall forwards, hearing a "
                  "crack as my knee hits the\n ground. The men stand over me. "
                  "I'm done.\n")
-    typing_print("\n To be continued...\n")
+    print("\n To be continued...\n")
     options = {
         1: 'Continue reading.',
         2: 'Return to main menu.',
@@ -525,7 +513,7 @@ def lydias_file():
     Prints all keys and values in the 'lydia' dictionary as plain text.
     """
     for key, value in lydia.items():
-        typing_print(f"\n {key}: {value}")
+        print(f"\n {key}: {value}")
 
 
 def simons_file():
@@ -533,7 +521,7 @@ def simons_file():
     Prints all keys and values in the 'simon' dictionary as plain text.
     """
     for key, value in simon.items():
-        typing_print(f"\n {key}: {value}")
+        print(f"\n {key}: {value}")
 
 
 # The date and time are formatted below so that it is displayed as clear text
@@ -553,9 +541,9 @@ def chapter2():
     """
     time.sleep(1)
     chapter_two = "Chapter Two: The Interview\n"
-    typing_print(chapter_two.center(80))
+    print(chapter_two.center(80))
     time.sleep(1)
-    typing_print("\n The officer drops the file onto the desk and leans over "
+    print("\n The officer drops the file onto the desk and leans over "
                  "to turn on\n the recorder.\n 'Interview with suspect, Lydia "
                  f"Simmons, at {time_now} on {today}.\n Officers present are "
                  "Smith, badge 247800, and Anderson, badge 310010.'\n"
@@ -563,7 +551,7 @@ def chapter2():
                  "officer opens his file at the first page and points to the "
                  "text.\n")
     lydias_file()
-    typing_print("\n\n I nod.\n"
+    print("\n\n I nod.\n"
                  " 'Any idea why you\'re here?' he asks.\n")
     options = {
         1: 'Yes.',
@@ -580,13 +568,13 @@ def answer_yes():
     function. Prints the next part of the story, displays the formatted simon
     dictionary and brings the user to the next decision point.
     """
-    typing_print(" I nod slightly.\n"
+    print(" I nod slightly.\n"
                  " 'Enlighten me,' he says.\n"
                  " 'My husband,' I say.\n"
                  " The officer turns to the next page in the file and spins "
                  "it around to\n show me.\n")
     simons_file()
-    typing_print("\n\n 'Is this your husband, Lydia?' the officer asks.\n"
+    print("\n\n 'Is this your husband, Lydia?' the officer asks.\n"
                  " 'Yes,' I say.\n"
                  " 'What\'s happened with your husband?' he asks.\n")
     options = {
@@ -604,7 +592,7 @@ def answer_no():
     function. Prints the next part of the story and brings the user to the next
     decision point.
     """
-    typing_print(" I curl my lip, raise my eyebrows and stare at the table.\n"
+    print(" I curl my lip, raise my eyebrows and stare at the table.\n"
                  " 'Care to explain why you were covered in blood when we "
                  "found you,\n or why you tried to flee? Perhaps you would "
                  "like to explain the \n situation in your bedroom?'\n")
@@ -623,7 +611,7 @@ def explain():
     or answer_no function. Prints the next part of the story and brings user to
     the next decision point.
     """
-    typing_print(" 'I found out that he was having an affair,' I say.\n"
+    print(" 'I found out that he was having an affair,' I say.\n"
                  " 'So you killed him?' the officer asks.\n"
                  " 'No,' I say.\n")
     options = {
@@ -641,7 +629,7 @@ def say_nothing():
     yes or no function. Prints the next part of the story and brings the user
     to the next decision point.
     """
-    typing_print(" 'Given that we found your husband dead, with several stab "
+    print(" 'Given that we found your husband dead, with several stab "
                  "wounds,\n in your bedroom, and you were covered in blood "
                  "and running away...'\n 'It looks bad for you,' the officer "
                  "says.\n")
@@ -660,7 +648,7 @@ def accident():
     the explain or say_nothing function. Prints the next part of the story and
     brings the user to the next decision point.
     """
-    typing_print(" 'I was trying to hurt myself. He just... got in the way,' "
+    print(" 'I was trying to hurt myself. He just... got in the way,' "
                  "I say.\n"
                  " 'And how many times did he get in the way?' the officer "
                  "asks.\n 'See, his body had multiple stab wounds. Did you "
@@ -678,7 +666,7 @@ def self_defence():
     in the explain or say_nothing function. Prints the next part of the story
     and brings the user to the next decision point.
     """
-    typing_print(" 'I told him that I knew he was having an affair,' I say.\n"
+    print(" 'I told him that I knew he was having an affair,' I say.\n"
                  " 'He was angry.'\n"
                  " 'Why would he be angry at you?' the officer asks.\n")
     options = {
@@ -696,7 +684,7 @@ def he_was_aggressive():
     in the self_defence function. Prints the next part of the story and brings
     the user to the next decision point.
     """
-    typing_print(" 'He could be aggressive,' I say.\n"
+    print(" 'He could be aggressive,' I say.\n"
                  " 'He could be, or he was?' the officer asks.\n"
                  " 'He was. He was controlling and he didn\'t have control "
                  "this time,' I say.\n"
@@ -717,7 +705,7 @@ def he_was_drunk():
     function. Prints the next part of the story and brings the user to the next
     decision point.
     """
-    typing_print(" 'He seemed to be inebriated,' I say.\n"
+    print(" 'He seemed to be inebriated,' I say.\n"
                  " 'He was drunk?' the officer asks.\n"
                  " I nod. 'He\'s a different person when he\'s drunk,' I say. "
                  "\n 'In what way?' he asks.\n"
@@ -738,7 +726,7 @@ def he_was_not_drunk():
     decision point in the he_was_aggressive function. Prints the next part of
     the story and brings the user to the next decision point.
     """
-    typing_print(" 'Why would you confront a man who you say is aggressive "
+    print(" 'Why would you confront a man who you say is aggressive "
                  "towards you?'\n the officer asks.\n"
                  " 'I didn\'t know it would be this bad,' I say.\n"
                  " The officer sighs. 'Let\'s get to the point,' he says.\n")
@@ -755,7 +743,7 @@ def we_argued():
     he_was_not_drunk function. Prints the next part of the story and brings the
     user to the next decision point.
     """
-    typing_print(" 'I was having a drink and packing my bag when he came "
+    print(" 'I was having a drink and packing my bag when he came "
                  "home,' I say.\n 'I was just going to stay with my sister "
                  "for a while.\n He came home and found me upstairs. I told "
                  "him what I knew and we argued.'\n 'And then?' The officer "
@@ -778,7 +766,7 @@ def question_findings():
     in the he_was_drunk function. Prints the next part of the story and brings
     the user to the next decision point.
     """
-    typing_print(" 'He certainly seemed drunk to me,' I say.\n"
+    print(" 'He certainly seemed drunk to me,' I say.\n"
                  " 'So the report is incorrect?' the officer asks.\n"
                  " 'It could be,' I reply.\n"
                  " The officer smiles. 'Then what happened?'\n")
@@ -795,7 +783,7 @@ def he_attacked_me():
     in the question_findings function. Prints the next part of the story and
     brings the user to the next decision point.
     """
-    typing_print(" 'He smashed the wine glass and threatened me with a large "
+    print(" 'He smashed the wine glass and threatened me with a large "
                  "piece,'\n I say. 'I tried to leave, but he stood between me "
                  "and the door. I begged\n him to let me go and he just... "
                  "attacked me,' I say.\n"
@@ -814,7 +802,7 @@ def listen_to_officer_1():
     in the we_argued function. Prints the next part of the story and brings
     the user to the next decision point.
     """
-    typing_print(" 'Look, Lydia,' the officer says. 'Charges are going to be "
+    print(" 'Look, Lydia,' the officer says. 'Charges are going to be "
                  "made.'\n"
                  " I nod, close to tears.\n"
                  f" 'Interview closing at {time_now}. Suspect is detained and "
@@ -832,7 +820,7 @@ def listen_to_officer_2():
     in he_attacked_me function. Prints the next part of the story and brings
     the user to the next decision point.
     """
-    typing_print(" 'Lydia, what you\'ve shared with us today has been nothing "
+    print(" 'Lydia, what you\'ve shared with us today has been nothing "
                  "short of\n preposterous,' the officer says. 'First you said "
                  "you were trying to hurt\n yourself, then you said he was "
                  "drunk - even questioning the toxicology\n report. Next, "
@@ -860,7 +848,7 @@ def view_charges_1():
     lydia.popitem()
     lydia.update({'Charges': 'Manslaughter'})
     lydias_file()
-    typing_print("\n To be continued...\n")
+    print("\n To be continued...\n")
     options = {
         1: 'Return to main menu.',
         2: introduction
@@ -878,7 +866,7 @@ def view_charges_2():
     lydia.popitem()
     lydia.update({'Charges': 'Murder'})
     lydias_file()
-    typing_print("\n To be continued...\n")
+    print("\n To be continued...\n")
     options = {
         1: 'Return to main menu.',
         2: introduction

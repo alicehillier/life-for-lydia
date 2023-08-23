@@ -118,7 +118,22 @@ def introduction():
     Displays the title of the story and an introduction to the app. It also
     provides instructions for the game.
     """
-    title = "LIFE FOR LYDIA"
+    title = """
+                        ██      ██ ███████ ███████ 
+                        ██      ██ ██      ██      
+                        ██      ██ █████   █████   
+                        ██      ██ ██      ██      
+                        ███████ ██ ██      ███████ 
+                           
+                           
+        ███████  ██████  ██████      ██      ██    ██ ██████  ██  █████  
+        ██      ██    ██ ██   ██     ██       ██  ██  ██   ██ ██ ██   ██ 
+        █████   ██    ██ ██████      ██        ████   ██   ██ ██ ███████ 
+        ██      ██    ██ ██   ██     ██         ██    ██   ██ ██ ██   ██ 
+        ██       ██████  ██   ██     ███████    ██    ██████  ██ ██   ██ 
+                                                                 
+                                                                 
+"""
     print(title.center(80))
     author = "by Alice Hillier\n"
     print(author.center(80))

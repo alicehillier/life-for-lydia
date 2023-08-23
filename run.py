@@ -134,13 +134,13 @@ def introduction():
     instructions for the game.
     """
     title = "LIFE FOR LYDIA"
-    typing_print(title.center(80))
+    print(title.center(80))
     author = "by Alice Hillier\n"
-    typing_print(author.center(80))
-    typing_print("\n Welcome to 'Life for Lydia', an interactive story written by Alice Hillier\n"
+    print(author.center(80))
+    print("\n Welcome to 'Life for Lydia', an interactive story written by Alice Hillier\n"
     " for the third milestone project in Code Institute's Software Development\n"
     " (E-Commerce) programme.\n")
-    typing_print("\n To play this game, you'll need to use the number keys on your keyboard\n"
+    print("\n To play this game, you'll need to use the number keys on your keyboard\n"
     " and the enter key. If you would like to leave the game and return to this page\n"
     " at any point, type '0' and press the enter key. Be warned though, your\n"
     " progress will not be saved!\n"

@@ -1,6 +1,5 @@
 """Import datetime to display current time and date in Chapter Two"""
 from datetime import datetime
-import getpass
 import time
 import os
 
@@ -52,7 +51,7 @@ def make_decision(options):
     """
     print(f"\n 1. {options[1]}\n 2. {options[2]}\n")
     while True:
-        decide = getpass.getpass(prompt="\n Enter 1 or 2.\n")
+        decide = input("\n Enter 1 or 2.\n")
         try:
             # If the first option is selected, run the function assigned to
             # number 3.
@@ -92,7 +91,7 @@ def go_to_next_step(options):
     """
     print(f"\n 1. {options[1]}\n")
     while True:
-        decide = getpass.getpass(prompt=" Enter 1.\n")
+        decide = input(" Enter 1.\n")
         try:
             if int(decide) == 1:
                 clear()

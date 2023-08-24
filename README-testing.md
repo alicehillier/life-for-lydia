@@ -43,6 +43,10 @@
 
 ## **Validation: PEP8 Linter Results**
 
+All code passed the validation process. 
+
+[PEP8 Linter Results](/documents/images/readme-testing-linter-results.png)
+
 ## **User Testing**
 
 1. User feedback suggested that the instructions in the introduction weren't clear enough, as it was only mentioned that the number keys were needed. In fact, the    

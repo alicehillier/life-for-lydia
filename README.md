@@ -280,6 +280,17 @@ The following features would be an excellent means of creating a fuller experien
     Solution: I updated the instructions paragraph in the introduction function, providing more clarity and a better
     user experience.
 
+### **Unresolved Issues and Bugs**
+
+1.  Issue: The typewriter effect I had in place for the story could easily be interrupted by user input. While I could 
+    pause user input while the text was printing to the console, this would result in all user inputs being queued. This
+    also means that if the user entered a valid answer before reading the question, they would immediately be directed
+    to the next step in the story once the text was finished printing. This would dramatically affect the user's 
+    experience and may cause confusion.
+
+    Solution: After a lengthy attempt to find a resolution, I decided to remove the typewriter effect as its negative
+    impact on user experience outweighed the pleasant aesthetics.
+
 [Back to top](https://github.com/alicehillier/life-for-lydia/#life-for-lydia)
 
 ## **Deployment**

@@ -91,7 +91,7 @@ def go_to_next_step(options):
     """
     print(f"\n 1. {options[1]}\n")
     while True:
-        decide = input(" Enter 1.\n")
+        decide = input("\n Enter 1.\n")
         try:
             if int(decide) == 1:
                 clear()

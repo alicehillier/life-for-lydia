@@ -137,7 +137,7 @@ def introduction():
          """)
     author = "by Alice Hillier\n"
     print(author.center(80))
-    loading = "\nLoading..."
+    loading = "\n Loading..."
     print(loading.center(80))
     time.sleep(5)
     clear()

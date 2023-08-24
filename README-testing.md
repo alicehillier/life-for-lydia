@@ -1,4 +1,4 @@
-# **Go-Match! Cats - Testing**
+# **Life for Lydia - Testing**
 
 [Go back to the README index](https://github.com/alicehillier/life-for-lydia#life-for-lydia)
 

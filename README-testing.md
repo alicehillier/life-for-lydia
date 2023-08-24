@@ -43,9 +43,9 @@
 
 ## **Validation: PEP8 Linter Results**
 
-All code passed the validation process. 
+All code in this project passed the validation process with no errors. 
 
-[PEP8 Linter Results](/documents/images/readme-testing-linter-results.png)
+![PEP8 Linter Results](/documents/images/readme-testing-linter-results.png)
 
 ## **User Testing**
 

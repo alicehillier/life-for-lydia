@@ -59,7 +59,21 @@ All code in this project passed the validation process with no errors.
 3. User feedback highlighted an error in one of the final functions of chapter two, view_charges_2. This prevented the user from viewing the content as an error was thrown. 
   - I reviewed the error message and saw that I had given an argument to popitem(). I checked my code in view_charges_1 and saw that I had correctly used the method pop('Reason for Arrest'), but did not do the same for view_charges_2. I changed the method to the same as the one I used in view_charges_1 and the issue no longer persisted, allowing the user to finish the chapter without issues.
 
-4. 
-  -
+4. My mentor suggested that it might be useful for the user to be able to see their own input, so they can catch typos before entering their answer to the console.
+  - I replaced all 'getpass' methods with 'input', so the user will be able to view their responses. While I initially chose to hide user input to avoid a cluttered console, I recognise that this could cause problems if the user accidentally enters the wrong option. 
 
 ## **Further Testing**
+
+Having acted on user feedback, I performed final tests on the app to check that all functionality requirements were met.
+
+1. Title page to Introduction: The transition from the title page to the introduction section works as expected, with the assigned 5-second delay.
+
+2. Introduction to Chapter Selection: Navigation works as expected and invalid entries by the user are met with appropriate error statements.
+
+3. make_decision and go_to_next_step functions work as expected throughout the app, with no apparent issues.
+
+4. The user is never in a position where they are unable to interact with the app.
+
+5. Datetime features work as intended, with variables in f-strings printing the correct information.
+
+6. Dictionary items are updated where applicable, and displayed correctly to the user.

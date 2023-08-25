@@ -1,6 +1,6 @@
 # **Life for Lydia**
 
-![*Life for Lydia* displayed on various devices]()
+![*Life for Lydia*: an Interactive Story](documents/images/features-title-page.png)
 
 [Visit my website here](https://life-for-lydia-bf0c0403fae6.herokuapp.com/)
 

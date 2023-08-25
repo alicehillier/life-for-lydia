@@ -295,6 +295,10 @@ likely want the story's ending to be a result of all of their past decisions.
     Solution: After a lengthy attempt to find a resolution, I decided to remove the typewriter effect as its negative
     impact on user experience outweighed the pleasant aesthetics.
 
+2.  Issue: Similar to the typewriter effect issue, the user is able to type into the console while time.sleep() is in use.
+
+    Solution: This appears to be due to the limitations of the deployed environment and, as delays are used sparingly in this app, it does not have a significant impact on the user's overall experience. 
+
 [Back to top](https://github.com/alicehillier/life-for-lydia/#life-for-lydia)
 
 ## **Deployment**

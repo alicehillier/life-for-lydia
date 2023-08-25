@@ -209,11 +209,15 @@ is then printed to the console before the user is redirected to the title page.
 
 The following features would be an excellent means of creating a fuller experience for the user:
 
-1. More chapters.
+1. More chapters: By creating additional layers of the story, the probability of the user returning to the app is increased
+and the level of engagement they have with the story strengthens.
 
-2. Long-term consequences of your decisions.
+2. Long-term consequences of your decisions: Giving the user influence over the outcome of the story is a great way to maintain or improve
+user engagement, and they are drawn back to the app for a new and varied experience.
 
-3. The option to save your progress.
+3. The option to save your progress: As more chapters are added to the story, a save option would be very beneficial, especially if decisions
+made by the user have a long-term impact. Having to start anew each time the app is visited could have little value for a frequent user, who would
+likely want the story's ending to be a result of all of their past decisions.
 
 [Back to top](https://github.com/alicehillier/life-for-lydia/#life-for-lydia)
 

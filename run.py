@@ -132,7 +132,6 @@ def introduction():
     """
     print("""
 
-
                         ██      ██ ███████ ███████
                         ██      ██ ██      ██
                         ██      ██ █████   █████
@@ -146,7 +145,6 @@ def introduction():
         ██      ██    ██ ██   ██     ██         ██    ██   ██ ██ ██   ██
         ██       ██████  ██   ██     ███████    ██    ██████  ██ ██   ██
 
-
          """)
     print("by Alice Hillier\n".center(80))
     print("\n Loading...")
@@ -155,7 +153,7 @@ def introduction():
     print("\n Welcome to 'Life for Lydia', an interactive story written by"
           " Alice Hillier\n for the third milestone project in Code"
           " Institute's Software Development\n (E-Commerce) programme.\n")
-    print("\n To play this game, you'll need to use the number keys on your"
+    print(" To play this game, you'll need to use the number keys on your"
           " keyboard\n and the enter key. If you would like to leave the game"
           " and return to this page\n at any point, type '0' and press the"
           " enter key. Be warned though, your\n progress will not be saved!\n"
@@ -443,7 +441,7 @@ def surrender():
           " rushing\n towards me.\n 'Stop!' he yells.\n I glance to my right."
           " I know I cannot outrun him. I raise my hands and he\n approaches"
           " me.\n 'Lets have a talk,' he says.\n")
-    print("\n To be continued...\n")
+    print("To be continued...\n".center(80))
     options = {
         1: 'Continue reading.',
         2: 'Return to main menu.',
@@ -464,7 +462,7 @@ def keep_running():
           " I have to outrun them. As I turn a corner, something sharp cuts"
           " into my\n foot. I scream and fall forwards, hearing a crack as my"
           " knee hits the\n ground. The men stand over me. I'm done.\n")
-    print("\n To be continued...\n")
+    print("To be continued...\n".center(80))
     options = {
         1: 'Continue reading.',
         2: 'Return to main menu.',
@@ -797,7 +795,7 @@ def view_charges_1():
     lydia.popitem()
     lydia.update({'Charges': 'Manslaughter'})
     lydias_file()
-    print("\n To be continued...\n")
+    print("To be continued...\n".center(80))
     options = {
         1: 'Return to main menu.',
         2: introduction
@@ -813,7 +811,7 @@ def view_charges_2():
     lydia.popitem()
     lydia.update({'Charges': 'Murder'})
     lydias_file()
-    print("\n To be continued...\n")
+    print("To be continued...\n".center(80))
     options = {
         1: 'Return to main menu.',
         2: introduction

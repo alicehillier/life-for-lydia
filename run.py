@@ -67,7 +67,12 @@ def make_decision(options):
             # If the user enters 0, return to main menu after a short delay.
             elif int(decide) == 0:
                 clear()
-                return_to_main()
+                print(" Looking for the right page...\n")
+                time.sleep(3)
+                print(" Aha! Found it!\n")
+                time.sleep(1)
+                clear()
+                introduction()
             else:
                 # If the user enters something else, display the relevant error
                 # statement.
@@ -77,16 +82,16 @@ def make_decision(options):
             continue
 
 
-def return_to_main():
-    """
-    Returns the user to the main menu.
-    """
-    print(" Looking for the right page...\n")
-    time.sleep(3)
-    print(" Aha! Found it!\n")
-    time.sleep(1)
-    clear()
-    introduction()
+# def return_to_main():
+#     """
+#     Returns the user to the main menu.
+#     """
+#     print(" Looking for the right page...\n")
+#     time.sleep(3)
+#     print(" Aha! Found it!\n")
+#     time.sleep(1)
+#     clear()
+#     introduction()
 
 
 def go_to_next_step(options):
@@ -104,7 +109,13 @@ def go_to_next_step(options):
                 clear()
                 options[2]()
             elif int(decide) == 0:
-                return_to_main()
+                clear()
+                print(" Looking for the right page...\n")
+                time.sleep(3)
+                print(" Aha! Found it!\n")
+                time.sleep(1)
+                clear()
+                introduction()
             else:
                 raise ValueError
         except ValueError:

@@ -66,6 +66,7 @@ def make_decision(options):
                 options[4]()
             # If the user enters 0, return to main menu after a short delay.
             elif int(decide) == 0:
+                clear()
                 return_to_main()
             else:
                 # If the user enters something else, display the relevant error
@@ -177,8 +178,7 @@ def chapter1():
     Prints the opening lines of the story and brings the user to the first
     decision point, which will direct the user to the next part of the story.
     """
-    chapter_one = "Chapter One: The Morning After\n"
-    print(chapter_one.center(80))
+    print("Chapter One: The Morning After\n".center(80))
     time.sleep(1)
     print("\n The winter is colder than usual. We haven't had snow in years,"
           " but\n now it envelops everything in sight. The birds are long"
@@ -507,12 +507,11 @@ def chapter2():
     decision.
     """
     time.sleep(1)
-    chapter_two = "Chapter Two: The Interview\n"
-    print(chapter_two.center(80))
+    print("Chapter Two: The Interview\n".center(80))
     time.sleep(1)
     print("\n The officer drops the file onto the desk and leans over to turn"
           " on\n the recorder.\n 'Interview with suspect, Lydia Simmons, at"
-          f"{time_now} on {today}.\n Officers present are Smith, badge 247800,"
+          f" {time_now} on {today}.\n Officers present are Smith, badge 247800,"
           " and Anderson, badge 310010.'\n"
           " 'Lydia, is this information correct?' he asks.\n The officer opens"
           " his file at the first page and points to the text.\n")

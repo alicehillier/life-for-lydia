@@ -517,17 +517,18 @@ def chapter2():
     Displays the opening lines of the chapter and presents the user with a
     decision.
     """
+    clear()
     time.sleep(1)
     print("Chapter Two: The Interview\n".center(80))
     time.sleep(1)
     print("\n The officer drops the file onto the desk and turns on the"
           " recorder.\n 'Interview with suspect, Lydia Simmons, at"
           f" {time_now} on {today}.\n Officers present are Smith, badge"
-          " 247800,\n and Anderson, badge 310010.'\n"
+          " 247800, and Anderson, badge 310010.'\n"
           " 'Lydia, is this information correct?' he asks, pointing to his"
-          " file.\n\n")
+          " file.\n")
     lydias_file()
-    print("\n\n I nod.\n"
+    print("\n I nod.\n"
           " 'Any idea why you\'re here?' he asks.\n")
     options = {
         1: 'Yes.',
@@ -546,9 +547,9 @@ def answer_yes():
           " 'Enlighten me,' he says.\n"
           " 'My husband,' I say.\n"
           " The officer turns to the next page in the file and spins it around"
-          " to\n show me.\n\n")
+          " to\n show me.\n")
     simons_file()
-    print("\n\n 'Is this your husband, Lydia?' the officer asks.\n"
+    print("\n 'Is this your husband, Lydia?' the officer asks.\n"
           " 'Yes,' I say.\n"
           " 'What\'s happened with your husband?' he asks.\n")
     options = {
@@ -796,7 +797,7 @@ def view_charges_1():
     lydia.popitem()
     lydia.update({'Charges': 'Manslaughter'})
     lydias_file()
-    print("\n\n To be continued...\n")
+    print("\n To be continued...\n")
     options = {
         1: 'Return to main menu.',
         2: introduction
@@ -812,7 +813,7 @@ def view_charges_2():
     lydia.popitem()
     lydia.update({'Charges': 'Murder'})
     lydias_file()
-    print("\\nn To be continued...\n")
+    print("\n To be continued...\n")
     options = {
         1: 'Return to main menu.',
         2: introduction

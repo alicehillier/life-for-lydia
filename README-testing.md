@@ -49,8 +49,7 @@ All code in this project passed the validation process with no errors.
 
 ## **User Testing**
 
-1. User feedback suggested that the instructions in the introduction weren't clear enough, as it was only mentioned that the number keys were needed. In fact, the    
-  user is required to type a valid number and then press the 'enter' key. 
+1. User feedback suggested that the instructions in the introduction weren't clear enough, as it was only mentioned that the number keys were needed. In fact, the user is required to type a valid number and then press the 'enter' key. 
   - As a result of this feedback, I updated the instructions paragraph in the introduction function, providing more clarity and a better user experience.
 
 2. User feedback highlighted minor errors where I hadn't updated the variable name from "time" to "time_now" in the second instance. This caused an issue as I had also imported the time module.

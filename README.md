@@ -256,8 +256,7 @@ likely want the story's ending to be a result of all of their past decisions.
     in any circumstance where the dictionary is called 'options', has strings assigned to numbers 1 and 2, and functions 
     assigned to numbers 3 and 4.
 
-3.  Issue: At decision points where only one option is available, the make_decision function could not be applied. The 
-    code was still repetitive.
+3.  Issue: At decision points where only one option is available, the make_decision function could not be applied. The code was still repetitive in several areas.
 
     Solution: Using the code from make_decision, I applied the same logic to create a function called go_to_next_step,
     which took the same argument of 'options' for consistency. The only changes necessary were to the calling of items 
@@ -270,19 +269,6 @@ likely want the story's ending to be a result of all of their past decisions.
     Solution: I removed a majority of the print statements and instead continued one long print statement across 
     several lines. For clarity, I ensured that the lines were not excessively long and were well-structured. I regularly
     used '\n' as well as breaking the lines in the code so that is would be easy to read.
-
-5.  Issue: The echoing of user input in the console made the appearance of the story confusing and difficult to read. 
-
-    Solution: Having done some research online, I found that getpass was a suitable fix, as the user's input would not
-    be printed to the console. I replaced all inputs with getpass, which greatly improved readability and produced a
-    cleaner look.
-
-6.  Issue: User feedback suggested that the instructions in the introduction weren't clear enough, as it was only 
-    mentioned that the number keys were needed. In fact, the user is required to type a valid number and then press the
-    'enter' key.
-
-    Solution: I updated the instructions paragraph in the introduction function, providing more clarity and a better
-    user experience.
 
 ### **Unresolved Issues and Bugs**
 

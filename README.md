@@ -170,24 +170,24 @@ allowing ample time for the user to read the title.
 
 ![Title Page](documents/images/features-title-page.png)
 
-2. An introduction section, containing information about the app and its instructions. This section contains important information
+2. An introduction section, containing information about the app and its instructions. This section provides the user with important information
 about how to exit the game and restart the app.
 
 ![Introduction](documents/images/features-introduction.png)
 
 3. Two chapters to choose from, which fleshes out the story and provides the user with more opportunities to interact. The ability to choose
-their preferred chapter will prevent the user from becoming bored if they have to endure the same experience just to move forward with the story.
+their preferred chapter will prevent the user from becoming bored, which may be the case if they have to endure the same experience just to move forward with the story.
 
 ![Chapter Selection](documents/images/features-chapter-selection.png)
 
 4. Frequent choices which allow the user to obtain more information about, or influence the outcome of, the story depending
-on their decisions.
+on their decisions. This enables the user to have an active role and is therefore likely to maintain the user's interest.
 
 ![Decisions](documents/images/features-decisions.png)
 
 5. The 'exit' option, which is available at every decision point and returns the user to the title page and then the introduction section. 
 Once '0' has been entered by the user, "Looking for the right page..." is printed to the console, followed by a short delay. "Aha! Found it!" 
-is then printed to the console before the user is redirected to the title page.
+is then printed to the console before the user is redirected to the title page. The text printed to the console shows that the user's request has been acknowledged and is in the process of being actioned.
 
 ![Exit App](documents/images/features-quit.png)
 

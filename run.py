@@ -50,9 +50,9 @@ def make_decision(options):
     with the user's selection. Raises ValueError if the user enters an invalid
     value and loops the input requirement until the value is considered valid.
     """
-    print(f"\n 1. {options[1]}\n 2. {options[2]}\n")
+    print(f" 1. {options[1]}\n 2. {options[2]}\n")
     while True:
-        decide = input("\n Enter 1 or 2.\n")
+        decide = input(" Enter 1 or 2.\n")
         try:
             # If the first option is selected, run the function assigned to
             # number 3.
@@ -101,9 +101,9 @@ def go_to_next_step(options):
     with keys as numbers 1-2, for this function to execute.
     Processes the user's input and calls the corresponding function.
     """
-    print(f"\n 1. {options[1]}\n")
+    print(f" 1. {options[1]}\n")
     while True:
-        decide = input("\n Enter 1.\n")
+        decide = input(" Enter 1.\n")
         try:
             if int(decide) == 1:
                 clear()
@@ -191,7 +191,7 @@ def chapter1():
     """
     print("Chapter One: The Morning After\n".center(80))
     time.sleep(1)
-    print("\n The winter is colder than usual. We haven't had snow in years,"
+    print(" The winter is colder than usual. We haven't had snow in years,"
           " but\n now it envelops everything in sight. The birds are long"
           " gone, and even the\n rats that swarmed the street in summer are"
           " either in hiding or dead. Webs\n of ice have gathered on the"
@@ -521,7 +521,7 @@ def chapter2():
     time.sleep(1)
     print("Chapter Two: The Interview\n".center(80))
     time.sleep(1)
-    print("\n The officer drops the file onto the desk and turns on the"
+    print(" The officer drops the file onto the desk and turns on the"
           " recorder.\n 'Interview with suspect, Lydia Simmons, at"
           f" {time_now} on {today}.\n Officers present are Smith, badge"
           " 247800, and Anderson, badge 310010.'\n"

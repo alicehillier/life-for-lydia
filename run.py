@@ -786,7 +786,7 @@ def view_charges_1():
     another decision.
     """
     lydia.popitem()
-    lydia.update({'Charges': 'Manslaughter'})
+    lydia.update({'Charges': 'Manslaughter\n'})
     lydias_file()
     print("To be continued...\n".center(80))
     options = {
@@ -802,7 +802,7 @@ def view_charges_2():
     another decision.
     """
     lydia.popitem()
-    lydia.update({'Charges': 'Murder'})
+    lydia.update({'Charges': 'Murder\n'})
     lydias_file()
     print("To be continued...\n".center(80))
     options = {

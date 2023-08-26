@@ -3,9 +3,13 @@ from datetime import datetime
 import time
 import os
 
-# THIS CODE IS FROM:
-# https://www.codingninjas.com/studio/library/how-to-clear-a-screen-in-python
-# and customised.
+# The date and time are formatted below so that it is displayed as clear text
+# to the user in the relevant sections.
+
+date = datetime.now()
+today = date.strftime("%A, %B %d, %Y")
+get_time_now = datetime.now().time()
+time_now = get_time_now.strftime("%H:%M")
 
 
 def clear():
@@ -29,10 +33,7 @@ def error_statements(decide):
     if decide.isalpha():
         print(f" You entered {decide}. That's not a number!\n"
               " Please enter a valid number from the options above!\n")
-    elif decide.isspace():
-        print(" You didn't enter anything!\n"
-              " Please enter a valid number from the options above!\n")
-    elif not decide:
+    elif decide.isspace() or not decide:
         print(" You didn't enter anything!\n"
               " Please enter a valid number from the options above!\n")
     else:
@@ -65,12 +66,7 @@ def make_decision(options):
                 options[4]()
             # If the user enters 0, return to main menu after a short delay.
             elif int(decide) == 0:
-                print(" Looking for the right page...\n")
-                time.sleep(3)
-                print(" Aha! Found it!\n")
-                time.sleep(1)
-                clear()
-                introduction()
+                return_to_main()
             else:
                 # If the user enters something else, display the relevant error
                 # statement.
@@ -79,6 +75,15 @@ def make_decision(options):
             error_statements(decide)
             continue
 
+def return_to_main():
+    """
+    """
+    print(" Looking for the right page...\n")
+    time.sleep(3)
+    print(" Aha! Found it!\n")
+    time.sleep(1)
+    clear()
+    introduction()
 
 def go_to_next_step(options):
     """
@@ -97,12 +102,7 @@ def go_to_next_step(options):
                 clear()
                 options[2]()
             elif int(decide) == 0:
-                print(" Looking for the right page...\n")
-                time.sleep(2)
-                print(" Aha! Found it!\n")
-                time.sleep(1)
-                clear()
-                introduction()
+                return_to_main()
             else:
                 raise ValueError
         except ValueError:
@@ -135,10 +135,8 @@ def introduction():
 
 
          """)
-    author = "by Alice Hillier\n"
-    print(author.center(80))
-    loading = "\n Loading..."
-    print(loading.center(80))
+    print("by Alice Hillier\n".center(80))
+    print("\n Loading...")
     time.sleep(5)
     clear()
     print("\n Welcome to 'Life for Lydia', an interactive story written by"
@@ -535,15 +533,6 @@ def simons_file():
         print(f"\n {key}: {value}")
 
 
-# The date and time are formatted below so that it is displayed as clear text
-# to the user in the relevant sections.
-
-date = datetime.now()
-today = date.strftime("%A, %B %d, %Y")
-get_time_now = datetime.now().time()
-time_now = get_time_now.strftime("%H:%M")
-
-
 def chapter2():
     """
     Prints the opening lines of the story, displays the formatted lydia
@@ -626,9 +615,9 @@ def explain():
           " 'No,' I say.\n")
     options = {
         1: 'It was an accident.',
-        2: 'It was self-defence.',
+        2: 'It was self-defense.',
         3: accident,
-        4: self_defence
+        4: self_defense
     }
     make_decision(options)
 
@@ -644,9 +633,9 @@ def say_nothing():
           " away...'\n 'It looks bad for you,' the officer says.\n")
     options = {
         1: 'It was an accident.',
-        2: 'It was self-defence.',
+        2: 'It was self-defense.',
         3: accident,
-        4: self_defence
+        4: self_defense
     }
     make_decision(options)
 
@@ -668,9 +657,9 @@ def accident():
     go_to_next_step(options)
 
 
-def self_defence():
+def self_defense():
     """
-    Runs when the user selects '2. It was self-defence.' at the decision point
+    Runs when the user selects '2. It was self-defense.' at the decision point
     in the explain or say_nothing function. Prints the next part of the story
     and brings the user to the next decision point.
     """
@@ -689,7 +678,7 @@ def self_defence():
 def he_was_aggressive():
     """
     Runs when the user selects '1. He was aggressive.' at the decision point
-    in the self_defence function. Prints the next part of the story and brings
+    in the self_defense function. Prints the next part of the story and brings
     the user to the next decision point.
     """
     print(" 'He could be aggressive,' I say.\n"
@@ -709,7 +698,7 @@ def he_was_aggressive():
 def he_was_drunk():
     """
     Runs when the user selects '2. He was drunk.' at the decision point
-    in the self_defence function or '1. He was drunk.' in the he_was_aggressive
+    in the self_defense function or '1. He was drunk.' in the he_was_aggressive
     function. Prints the next part of the story and brings the user to the next
     decision point.
     """

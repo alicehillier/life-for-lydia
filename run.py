@@ -120,7 +120,9 @@ def introduction():
     Displays the title of the story and an introduction to the app. It also
     provides instructions for the game.
     """
+    clear()
     print("""
+
 
                         ██      ██ ███████ ███████
                         ██      ██ ██      ██
@@ -134,6 +136,7 @@ def introduction():
         █████   ██    ██ ██████      ██        ████   ██   ██ ██ ███████
         ██      ██    ██ ██   ██     ██         ██    ██   ██ ██ ██   ██
         ██       ██████  ██   ██     ███████    ██    ██████  ██ ██   ██
+
 
          """)
     print("by Alice Hillier\n".center(80))

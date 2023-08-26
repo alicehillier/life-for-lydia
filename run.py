@@ -520,12 +520,12 @@ def chapter2():
     time.sleep(1)
     print("Chapter Two: The Interview\n".center(80))
     time.sleep(1)
-    print("\n The officer drops the file onto the desk and leans over to turn"
-          " on\n the recorder.\n 'Interview with suspect, Lydia Simmons, at"
-          f" {time_now} on {today}.\n Officers present are Smith, badge 247800,"
-          " and Anderson, badge 310010.'\n"
-          " 'Lydia, is this information correct?' he asks.\n The officer opens"
-          " his file at the first page and points to the text.\n\n")
+    print("\n The officer drops the file onto the desk and turns on the"
+          " recorder.\n 'Interview with suspect, Lydia Simmons, at"
+          f" {time_now} on {today}.\n Officers present are Smith, badge"
+          " 247800,\n and Anderson, badge 310010.'\n"
+          " 'Lydia, is this information correct?' he asks, pointing to his"
+          " file.\n\n")
     lydias_file()
     print("\n\n I nod.\n"
           " 'Any idea why you\'re here?' he asks.\n")

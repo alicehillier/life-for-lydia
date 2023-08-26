@@ -501,7 +501,7 @@ def lydias_file():
     Prints all keys and values in the 'lydia' dictionary as plain text.
     """
     for key, value in lydia.items():
-        print(f"\n {key}: {value}")
+        print(f" {key}: {value}")
 
 
 def simons_file():
@@ -509,7 +509,7 @@ def simons_file():
     Prints all keys and values in the 'simon' dictionary as plain text.
     """
     for key, value in simon.items():
-        print(f"\n {key}: {value}")
+        print(f" {key}: {value}")
 
 
 def chapter2():
@@ -525,7 +525,7 @@ def chapter2():
           f" {time_now} on {today}.\n Officers present are Smith, badge 247800,"
           " and Anderson, badge 310010.'\n"
           " 'Lydia, is this information correct?' he asks.\n The officer opens"
-          " his file at the first page and points to the text.\n")
+          " his file at the first page and points to the text.\n\n")
     lydias_file()
     print("\n\n I nod.\n"
           " 'Any idea why you\'re here?' he asks.\n")
@@ -546,7 +546,7 @@ def answer_yes():
           " 'Enlighten me,' he says.\n"
           " 'My husband,' I say.\n"
           " The officer turns to the next page in the file and spins it around"
-          " to\n show me.\n")
+          " to\n show me.\n\n")
     simons_file()
     print("\n\n 'Is this your husband, Lydia?' the officer asks.\n"
           " 'Yes,' I say.\n"
@@ -796,7 +796,7 @@ def view_charges_1():
     lydia.popitem()
     lydia.update({'Charges': 'Manslaughter'})
     lydias_file()
-    print("\n To be continued...\n")
+    print("\n\n To be continued...\n")
     options = {
         1: 'Return to main menu.',
         2: introduction
@@ -812,7 +812,7 @@ def view_charges_2():
     lydia.popitem()
     lydia.update({'Charges': 'Murder'})
     lydias_file()
-    print("\n To be continued...\n")
+    print("\\nn To be continued...\n")
     options = {
         1: 'Return to main menu.',
         2: introduction

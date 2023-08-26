@@ -75,8 +75,10 @@ def make_decision(options):
             error_statements(decide)
             continue
 
+
 def return_to_main():
     """
+    Returns the user to the main menu.
     """
     print(" Looking for the right page...\n")
     time.sleep(3)
@@ -85,14 +87,13 @@ def return_to_main():
     clear()
     introduction()
 
+
 def go_to_next_step(options):
     """
     Takes the argument 'options', which will be defined differently as a
     dictionary in each function. Dictionaries must have two key-value pairs,
     with keys as numbers 1-2, for this function to execute.
-    Processes the user's input, calling the relevant function in accordance
-    with the user's selection. Raises ValueError if the user enters an invalid
-    value and loops the input requirement until the value is considered valid.
+    Processes the user's input and calls the corresponding function.
     """
     print(f"\n 1. {options[1]}\n")
     while True:
@@ -196,9 +197,7 @@ def chapter1():
 
 def do_it():
     """
-    Runs when the user selects '1. Do it.' at the decision point in chapter1
-    or delay_it functions. Prints the next part of the story and brings the
-    user to the next decision point.
+    Displays 'Do it.' text and presents the user with another decision.
     """
     print(" I slowly climb the stairs, my hand slipping as I try to hold onto"
           " the\n bannister. I tighten my grip and continue upwards. As I turn"
@@ -215,9 +214,7 @@ def do_it():
 
 def delay_it():
     """
-    Runs when the user selects '2. Delay it.' at the decision point in the
-    chapter1 function. Prints the next part of the story and brings the user to
-    the next decision point.
+    Displays 'Delay it.' text and presents the user with another decision.
     """
     print(" I make a cup of tea. I can't put this off much longer…\n")
     options = {
@@ -229,9 +226,8 @@ def delay_it():
 
 def try_to_wake_him():
     """
-    Runs when the user selects '1. Try to wake him.' at the decision point in
-    the do_it function. Prints the next part of the story and brings the user
-    to the next decision point.
+    Displays 'Try to wake him.' text and presents the user with another
+    decision.
     """
     print(" At this point, it seems pointless to try to wake him up.\n")
     options = {
@@ -243,10 +239,7 @@ def try_to_wake_him():
 
 def clean_up():
     """
-    Runs when the user selects '2. Clean up.' at the decision point in do_it
-    function or '1. Clean up.' at the decision point in the try_to_wake_him
-    function. Prints the next part of the story and brings the user to the next
-    decision point.
+    Displays 'Clean up.' text and presents the user with another decision.
     """
     print(" I start by clearing the area around the bed, kicking clothes to"
           " the\n side to clear a path. I'll need something to clear up the"
@@ -262,9 +255,7 @@ def clean_up():
 
 def get_a_mop_1():
     """
-    Runs when the user selects '1. Get a mop.' at the decision point in the
-    clean_up function. Prints the next part of the story and brings the user to
-    the next decision point.
+    Displays 'Get a mop.' text and presents the user with another decision.
     """
     print(" I don't think a mop is the best choice here.\n")
     options = {
@@ -276,10 +267,8 @@ def get_a_mop_1():
 
 def get_a_dustpan():
     """
-    Runs when the user selects '2. Get a dustpan and brush.' at the decision
-    point in the clean_up function or '1. Get a dustpan and brush.' at the
-    decision point in the get_a_mop_1 function. Prints the next part of the
-    story and brings the user to the next decision point.
+    Displays 'Get a dustpan and brush.' text and presents the user with another
+    decision.
     """
     print(" I retrieve the dustpan and brush from the cupboard under the"
           " kitchen\n sink and begin to clear up the glass. Now that's done, I"
@@ -295,9 +284,7 @@ def get_a_dustpan():
 
 def get_tissues():
     """
-    Runs when the user selects '1. Get tissues.' at the decision point in the
-    get_a_dustpan function. Prints the next part of the story and brings the
-    user to the next decision point.
+    Displays 'Get tissues.' text and presents the user with another decision.
     """
     print(" Tissues aren't going to be enough…\n")
     options = {
@@ -309,10 +296,7 @@ def get_tissues():
 
 def get_towels():
     """
-    Runs when the user selects '2. Get towels.' at the decision point in the
-    get_a_dustpan function or '1. Get towels.' at the decision point in the
-    get_tissues function. Prints the next part of the story and brings the user
-    to the next decision point.
+    Displays 'Get towels.' text and presents the user with another decision.
     """
     print(" It takes a few towels, but they soak up most of the blood. I'll"
           " have\n to use a mop for the rest.\n")
@@ -325,9 +309,7 @@ def get_towels():
 
 def get_a_mop_2():
     """
-    Runs when the user selects '1. Get a mop.' at the decision point in the
-    get_towels function. Prints the next part of the story and brings the
-    user to the next decision point.
+    Displays 'Get a mop.' text and presents the user with another decision.
     """
     print(" As I make my way downstairs, I hear a barrage of heavy bangs on"
           " the\n front door. I look down at my clothes. I can't see any"
@@ -343,9 +325,7 @@ def get_a_mop_2():
 
 def open_the_door():
     """
-    Runs when the user selects '1. Open the door.' at the decision point in the
-    get_a_mop_2 function. Prints the next part of the story and brings the user
-    to the next decision point.
+    Displays 'Open the door.' text and presents the user with another decision.
     """
     print(" Are you sure?\n")
     options = {
@@ -359,9 +339,7 @@ def open_the_door():
 
 def ignore_it():
     """
-    Runs when the user selects '1. Ignore it.' at the decision point in the
-    get_a_mop_2 function. Prints the next part of the story and brings the user
-    to the next decision point.
+    Displays 'Ignore it.' text and presents the user with another decision.
     """
     print(" I continue downstairs, quickly and quietly. As I go to open the\n"
           " storage cupboard under the stairs, I notice blood on my hands. I"
@@ -378,9 +356,8 @@ def ignore_it():
 
 def look_for_stains():
     """
-    Runs when the user selects '1. Look for stains.' at the decision point in
-    the open_the_door function. Prints the next part of the story and brings
-    the user to the next decision point.
+    Displays 'Look for stains.' text and presents the user with another
+    decision.
     """
     print(" I check my clothes again and see some splashes of blood on my\n"
           " slippers. As I pull my gown towards me to get a better look, the"
@@ -398,9 +375,7 @@ def look_for_stains():
 
 def open_it():
     """
-    Runs when the user selects '2. Open it.' at the decision point in the
-    open_the_door function. Prints the next part of the story and brings the
-    user to the next decision point.
+    Displays 'Open it.' text and presents the user with another decision.
     """
     print(" I try to compose myself and open the door with a soft smile. In"
           " front\n of me are two police officers.\n"
@@ -419,9 +394,8 @@ def open_it():
 
 def think_of_excuse():
     """
-    Runs when the user selects '1. Think of an excuse.' at the decision point
-    in open_it function. Prints the next part of the story and brings the user
-    to the next decision point.
+    Displays 'Think of an excuse.' text and presents the user with another
+    decision.
     """
     print(" 'I... sorry, I was just about to go out,' I say.\n"
           " 'In your dressing gown, Miss?' the older officer says.\n"
@@ -435,9 +409,7 @@ def think_of_excuse():
 
 def escape():
     """
-    Runs when the user selects '1. Escape.' at the decision point in the
-    ignore_it, look_for_stains or think_of_excuse function. Prints the next
-    part of the story and brings the user to the next decision point.
+    Displays 'Escape.' text and presents the user with another decision.
     """
     print(" I rush to the kitchen to escape out the back door. As I trudge\n"
           " through the thick snow, my slippers drenched and my feet freezing,"
@@ -454,9 +426,7 @@ def escape():
 
 def surrender():
     """
-    Runs when the user selects '1. Surrender.' at the decision point in the
-    escape function. Prints the next part of the story and brings the
-    user to the next decision point.
+    Displays 'Surrender.' text and presents the user with another decision.
     """
     print(" I look to my left at the end of the alley and see an officer"
           " rushing\n towards me.\n 'Stop!' he yells.\n I glance to my right."
@@ -474,9 +444,7 @@ def surrender():
 
 def keep_running():
     """
-    Runs when the user selects '2. Keep running.' at the decision point in the
-    escape function. Prints the next part of the story and brings the
-    user to the next decision point.
+    Displays 'Keep running.' text and presents the user with another decision.
     """
     print(" I kick off my slippers and my feet are raw. I head right and"
           " follow\n the alley as it winds between houses. I glance behind me"
@@ -535,9 +503,8 @@ def simons_file():
 
 def chapter2():
     """
-    Prints the opening lines of the story, displays the formatted lydia
-    dictionary via the lydias_file function. Contains the first decision, which
-    will direct the user to the next part of the story.
+    Displays the opening lines of the chapter and presents the user with a
+    decision.
     """
     time.sleep(1)
     chapter_two = "Chapter Two: The Interview\n"
@@ -563,9 +530,7 @@ def chapter2():
 
 def answer_yes():
     """
-    Runs when the user selects '1. Yes.' at the decision point in the chapter2
-    function. Prints the next part of the story, displays the formatted simon
-    dictionary and brings the user to the next decision point.
+    Displays 'Yes.' text and presents the user with another decision.
     """
     print(" I nod slightly.\n"
           " 'Enlighten me,' he says.\n"
@@ -587,9 +552,7 @@ def answer_yes():
 
 def answer_no():
     """
-    Runs when the user selects '2. No.' at the decision point in the chapter2
-    function. Prints the next part of the story and brings the user to the next
-    decision point.
+    Displays 'No.' text and presents the user with another decision.
     """
     print(" I curl my lip, raise my eyebrows and stare at the table.\n"
           " 'Care to explain why you were covered in blood when we found you,"
@@ -606,9 +569,7 @@ def answer_no():
 
 def explain():
     """
-    Runs when user selects '1. Explain.' at the decision point in answer_yes
-    or answer_no function. Prints the next part of the story and brings user to
-    the next decision point.
+    Displays 'Explain.' text and presents the user with another decision.
     """
     print(" 'I found out that he was having an affair,' I say.\n"
           " 'So you killed him?' the officer asks.\n"
@@ -624,9 +585,7 @@ def explain():
 
 def say_nothing():
     """
-    Runs when the user selects '2. Say nothing.' at the decision point in the
-    yes or no function. Prints the next part of the story and brings the user
-    to the next decision point.
+    Displays 'Say nothing.' text and presents the user with another decision.
     """
     print(" 'Given that we found your husband dead, with several stab ounds,"
           "\n in your bedroom, and you were covered in blood and running"
@@ -642,9 +601,8 @@ def say_nothing():
 
 def accident():
     """
-    Runs when user selects '1. It was an accident.' at the decision point in
-    the explain or say_nothing function. Prints the next part of the story and
-    brings the user to the next decision point.
+    Displays 'It was an accident.' text and presents the user with another
+    decision.
     """
     print(" 'I was trying to hurt myself. He just... got in the way,' I say.\n"
           " 'And how many times did he get in the way?' the officer asks.\n"
@@ -659,9 +617,8 @@ def accident():
 
 def self_defense():
     """
-    Runs when the user selects '2. It was self-defense.' at the decision point
-    in the explain or say_nothing function. Prints the next part of the story
-    and brings the user to the next decision point.
+    Displays 'It was self-defense.' text and presents the user with another
+    decision.
     """
     print(" 'I told him that I knew he was having an affair,' I say.\n"
           " 'He was angry.'\n"
@@ -677,9 +634,8 @@ def self_defense():
 
 def he_was_aggressive():
     """
-    Runs when the user selects '1. He was aggressive.' at the decision point
-    in the self_defense function. Prints the next part of the story and brings
-    the user to the next decision point.
+    Displays 'He was aggressive.' text and presents the user with another
+    decision.
     """
     print(" 'He could be aggressive,' I say.\n"
           " 'He could be, or he was?' the officer asks.\n"
@@ -697,10 +653,7 @@ def he_was_aggressive():
 
 def he_was_drunk():
     """
-    Runs when the user selects '2. He was drunk.' at the decision point
-    in the self_defense function or '1. He was drunk.' in the he_was_aggressive
-    function. Prints the next part of the story and brings the user to the next
-    decision point.
+    Displays 'He was drunk.' text and presents the user with another decision.
     """
     print(" 'He seemed to be inebriated,' I say.\n"
           " 'He was drunk?' the officer asks.\n"
@@ -719,9 +672,8 @@ def he_was_drunk():
 
 def he_was_not_drunk():
     """
-    Runs when the user selects '2. He might not have been drunk.' at the
-    decision point in the he_was_aggressive function. Prints the next part of
-    the story and brings the user to the next decision point.
+    Displays 'He might not have been drunk.' text and presents the user with
+    another decision.
     """
     print(" 'Why would you confront a man who you say is aggressive towards"
           " you?'\n the officer asks.\n"
@@ -736,9 +688,7 @@ def he_was_not_drunk():
 
 def we_argued():
     """
-    Runs when the user selects '1. We argued.' at the decision point in the
-    he_was_not_drunk function. Prints the next part of the story and brings the
-    user to the next decision point.
+    Displays 'We argued.' text and presents the user with another decision.
     """
     print(" 'I was having a drink and packing my bag when he came home,' I"
           " say.\n 'I was just going to stay with my sister for a while.\n He"
@@ -759,9 +709,8 @@ def we_argued():
 
 def question_findings():
     """
-    Runs when user selects '1. Question the findings.' at the decision point
-    in the he_was_drunk function. Prints the next part of the story and brings
-    the user to the next decision point.
+    Displays 'Question the findings.' text and presents the user with another
+    decision.
     """
     print(" 'He certainly seemed drunk to me,' I say.\n"
           " 'So the report is incorrect?' the officer asks.\n"
@@ -776,9 +725,8 @@ def question_findings():
 
 def he_attacked_me():
     """
-    Runs when the user selects '1. He attacked me.' at the decision point
-    in the question_findings function. Prints the next part of the story and
-    brings the user to the next decision point.
+    Displays 'He attacked me.' text and presents the user with another
+    decision.
     """
     print(" 'He smashed the wine glass and threatened me with a large piece,'"
           "\n I say. 'I tried to leave, but he stood between me and the door."
@@ -794,9 +742,8 @@ def he_attacked_me():
 
 def listen_to_officer_1():
     """
-    Runs when user selects '1. Listen to the officer.' at the decision point
-    in the we_argued function. Prints the next part of the story and brings
-    the user to the next decision point.
+    Displays 'Listen to the officer.' text and presents the user with another
+    decision.
     """
     print(" 'Look, Lydia,' the officer says. 'Charges are going to be made.'\n"
           " I nod, close to tears.\n"
@@ -811,9 +758,8 @@ def listen_to_officer_1():
 
 def listen_to_officer_2():
     """
-    Runs when user selects '1. Listen to the officer.' at the decision point
-    in he_attacked_me function. Prints the next part of the story and brings
-    the user to the next decision point.
+    Displays alternative 'Listen to the officer.' text and presents the user
+    with another decision.
     """
     print(" 'Lydia, what you\'ve shared with us today has been nothing short"
           " of\n preposterous,' the officer says. 'First you said you were"
@@ -834,10 +780,8 @@ def listen_to_officer_2():
 
 def view_charges_1():
     """
-    Runs when the user selects '1. View charges.' at the decision point
-    in listen_to_officer_1 function. Removes the 'Reason for arrest' key and
-    its value from the lydia dictionary and adds a new key and value. Triggers
-    the lydias_file function, which will display the information to the user.
+    Displays the updated dictionary for 'lydia' and presents the user with
+    another decision.
     """
     lydia.popitem()
     lydia.update({'Charges': 'Manslaughter'})
@@ -852,10 +796,8 @@ def view_charges_1():
 
 def view_charges_2():
     """
-    Runs when the user selects '1. View charges.' at the decision point
-    in listen_to_officer_2 function. Removes the 'Reason for arrest' key and
-    its value from the lydia dictionary and adds a new key and value. Triggers
-    the lydias_file function, which will display the information to the user.
+    Displays the updated dictionary for 'lydia' and presents the user with
+    another decision.
     """
     lydia.popitem()
     lydia.update({'Charges': 'Murder'})

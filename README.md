@@ -368,7 +368,10 @@ Changes made on the local machine (cloned repository) can be pushed to the upstr
 
 ## **Acknowledgements**
 
-- ChatGPT: for explaining console errors I faced in simple terms.
-- [https://patorjk.com/software/taag/](https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20): for creating the title graphics.
+- [ChatGPT](https://chat.openai.com/): for explaining console errors I faced in simple terms.
+- [Coding Ninjas](https://www.codingninjas.com/studio/library/how-to-clear-a-screen-in-python#:~:text=There%20are%20several%20commands%20that,to%20clear%20the%20shell%2Fterminal.): for explaining how to clear the console depending on which operating system is being used.
+- [Python Docs](https://docs.python.org/3/library/datetime.html): for explaining how to stringify date and time in simple text.
+- [GeeksforGeeks](https://www.geeksforgeeks.org/how-to-add-time-delay-in-python/): for explaining how to set a delay in Python.
+- [patorjk.com](https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20): for creating the title graphics.
 
 [Back to top](https://github.com/alicehillier/life-for-lydia/#life-for-lydia)

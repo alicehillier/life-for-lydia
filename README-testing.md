@@ -45,7 +45,7 @@
 
 All code in this project passed the validation process with no errors. 
 
-![PEP8 Linter Results](/documents/images/readme-testing-linter-results.png)
+![PEP8 Linter Results](/documents/images/testing/readme-testing-linter-results.png)
 
 ## **User Testing**
 
@@ -67,12 +67,44 @@ Having acted on user feedback, I performed final tests on the app to check that 
 
 1. Title page to Introduction: The transition from the title page to the introduction section works as expected, with the assigned 5-second delay.
 
-2. Introduction to Chapter Selection: Navigation works as expected and invalid entries by the user are met with appropriate error statements.
+![Title page to Introduction transition](/documents/images/testing/testing-title-page.gif)
+
+2. User input: Navigation works as expected and invalid entries by the user are met with appropriate error statements.
+
+    i. The error statement displayed when the user input contains alphabet characters:
+
+    ![Alphabet Characters Error Statement](documents/images/features/features-error-1.png)
+
+    ii. The error statement displayed when the user input is made up of spaces, or nothing is entered at all:
+
+    ![Empty Input Error Statement](documents/images/features/features-error-2-3.png) 
+
+    iii. The error statement displayed when the user input is not a valid option and does not qualify for either of the statements above:
+
+    ![All-Encompassing Error Statement](documents/images/features/features-error-4.png)
 
 3. make_decision and go_to_next_step functions work as expected throughout the app, with no apparent issues.
 
-4. The user is never in a position where they are unable to interact with the app.
+![Decision functions working correctly](documents/images/testing/testing-decision-functions.gif)
+
+4. The user is never in a position where they are unable to interact with the app. At the end of each chapter, the user is presented with at least one option to continue using the app.
+
+![End of chapter option](documents/images/testing/testing-end-of-chapter.png)
 
 5. Datetime features work as intended, with variables in f-strings printing the correct information.
 
+![Date and time formatted correctly](documents/images/testing/testing-datetime.png)
+
 6. Dictionary items are updated where applicable, and displayed correctly to the user.
+
+    i. The dictionary containing Lydia's information as first shown to the user:
+
+    ![Dictionary formatted correctly](/documents/images/testing/testing-dictionary.png)
+
+    ii. If certain decisions are made, the 'Reason for Arrest' key and its value will be removed and the dictionary will be updated with a murder charge. 
+
+    ![Dictionary updated correctly: Murder](/documents/images/testing/testing-dictionary-update1.png)
+
+    iii. If certain decisions are made, the 'Reason for Arrest' key and its value will be removed and the dictionary will be updated with a manslaughter charge. 
+
+    ![Dictionary updated correctly: Manslaughter](/documents/images/testing/testing-dictionary-update2.png)

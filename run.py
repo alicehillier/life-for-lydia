@@ -143,7 +143,7 @@ def introduction():
     print("\n Loading...")
     time.sleep(5)
     clear()
-    print("\n Welcome to 'Life for Lydia', an interactive story written by"
+    print(" Welcome to 'Life for Lydia', an interactive story written by"
           " Alice Hillier\n for the third milestone project in Code"
           " Institute's Software Development\n (E-Commerce) programme.\n")
     print(" To play this game, you'll need to use the number keys on your"

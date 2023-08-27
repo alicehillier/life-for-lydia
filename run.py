@@ -439,7 +439,7 @@ def surrender():
         1: 'Continue reading.',
         2: 'Return to main menu.',
         3: chapter2,
-        4: introduction
+        4: return_to_main
     }
     make_decision(options)
 
@@ -460,7 +460,7 @@ def keep_running():
         1: 'Continue reading.',
         2: 'Return to main menu.',
         3: chapter2,
-        4: introduction
+        4: return_to_main
     }
     make_decision(options)
 
@@ -791,7 +791,7 @@ def view_charges_1():
     print("To be continued...\n".center(80))
     options = {
         1: 'Return to main menu.',
-        2: introduction
+        2: return_to_main
     }
     go_to_next_step(options)
 
@@ -807,7 +807,7 @@ def view_charges_2():
     print("To be continued...\n".center(80))
     options = {
         1: 'Return to main menu.',
-        2: introduction
+        2: return_to_main
     }
     go_to_next_step(options)
 

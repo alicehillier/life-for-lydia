@@ -61,7 +61,7 @@ All code in this project passed the validation process with no errors.
 4. My mentor suggested that it might be useful for the user to be able to see their own input, so they can catch typos before entering their answer to the console.
   - I replaced all 'getpass' methods with 'input', so the user will be able to view their responses. While I initially chose to hide user input to avoid a cluttered console, I recognise that this could cause problems if the user accidentally enters the wrong option. 
 
-## **Further Testing**
+## **Manual Testing**
 
 Having acted on user feedback, I performed final tests on the app to check that all functionality requirements were met.
 

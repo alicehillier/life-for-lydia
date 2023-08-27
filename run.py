@@ -141,7 +141,7 @@ def introduction():
          """)
     print("by Alice Hillier\n".center(80))
     print("\n Loading...")
-    time.sleep(5)
+    time.sleep(3)
     clear()
     print(" Welcome to 'Life for Lydia', an interactive story by Alice"
           " Hillier.\n")

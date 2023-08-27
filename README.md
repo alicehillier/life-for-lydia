@@ -2,7 +2,7 @@
 
 ![*Life for Lydia*: an Interactive Story](documents/images/features-title-page.png)
 
-[Visit my website here](https://life-for-lydia-bf0c0403fae6.herokuapp.com/)
+[Visit my app here](https://life-for-lydia-bf0c0403fae6.herokuapp.com/)
 
 1. [Introduction](https://github.com/alicehillier/life-for-lydia/#introduction)
 
@@ -362,6 +362,7 @@ Changes made on the local machine (cloned repository) can be pushed to the upstr
 
 ## **Credits**
 
+- My mentor, Richard Wells, for his advice and support.
 - My husband, Norman, for his constant support.
 - My friends and family for testing my app repeatedly.
 

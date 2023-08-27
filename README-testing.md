@@ -4,7 +4,7 @@
 
 [Go back to the Testing section of the README](https://github.com/alicehillier/life-for-lydia#testing)
 
-[Visit my website here](https://life-for-lydia-bf0c0403fae6.herokuapp.com/)
+[Visit my app here](https://life-for-lydia-bf0c0403fae6.herokuapp.com/)
 
 ## **User Stories**
 

@@ -369,7 +369,6 @@ Changes made on the local machine (cloned repository) can be pushed to the upstr
 ## **Acknowledgements**
 
 - ChatGPT: for explaining console errors I faced in simple terms.
-- [https://www.codingninjas.com/](https://www.codingninjas.com/studio/library/how-to-clear-a-screen-in-python#:~:text=There%20are%20several%20commands%20that,to%20clear%20the%20shell%2Fterminal.): for explaining how to clear the console depending on which operating system is being used.
 - [https://patorjk.com/software/taag/](https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20): for creating the title graphics.
 
 [Back to top](https://github.com/alicehillier/life-for-lydia/#life-for-lydia)

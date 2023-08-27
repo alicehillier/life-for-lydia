@@ -165,7 +165,7 @@ After establishing the content of the interactive story, I began putting togethe
 
 ### **Existing Features**
 
-1. A title page, displayed with large graphics. "Loading..." appears in the bottom left corner while a 5 second delay executes, 
+1. A title page, displayed with large graphics. "Loading..." appears in the bottom left corner while a 3-second delay executes, 
 allowing ample time for the user to read the title.
 
 ![Title Page](documents/images/features/features-title-page.png)

@@ -61,11 +61,14 @@ All code in this project passed the validation process with no errors.
 4. My mentor suggested that it might be useful for the user to be able to see their own input, so they can catch typos before entering their answer to the console.
   - I replaced all 'getpass' methods with 'input', so the user will be able to view their responses. While I initially chose to hide user input to avoid a cluttered console, I recognise that this could cause problems if the user accidentally enters the wrong option. 
 
+5. User feedback suggested that the 5-second transition from the title page to introduction section was a bit too long.
+  - I reduced the 'loading' time to 3 seconds, still allowing the user enough time to read the title before transitioning to the introduction section.
+
 ## **Manual Testing**
 
 Having acted on user feedback, I performed final tests on the app to check that all functionality requirements were met.
 
-1. Title page to Introduction: The transition from the title page to the introduction section works as expected, with the assigned 5-second delay.
+1. Title page to Introduction: The transition from the title page to the introduction section works as expected, with the assigned 3-second delay.
 
 ![Title page to Introduction transition](/documents/images/testing/testing-title-page.gif)
 
